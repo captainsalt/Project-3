@@ -29,7 +29,14 @@ module.exports = {
     },
     plugins: [
         new HtmlWebpackPlugin({
-            template: "./client/public/index.html"
+            template: "./client/public/index.html",
+            minify: {
+                collapseWhitespace: isProduction,
+                minifyJS: isProduction,
+                minifyCSS: isProduction,
+                collapseInlineTagWhitespace: isProduction,
+                collapseBooleanAttributes: isProduction
+            }
         })
     ].concat((isProduction) ?
         //Production only plugins    
