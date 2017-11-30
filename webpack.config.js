@@ -13,18 +13,28 @@ module.exports = {
             "./client/app.css"
         ]
     },
+    devServer: {
+        contentBase: "./client/dist"
+    },
     output: {
         filename: "[name].bundle.js",
         path: path.resolve(__dirname, "client/dist")
     },
     module: {
         rules: [{
-            test: /\.jsx?$/,
-            exclude: /node_modules/,
-            use: [
-                'babel-loader',
-            ],
-        }]
+                test: /\.jsx?$/,
+                exclude: /node_modules/,
+                use: [
+                    'babel-loader',
+                ],
+            },
+            {
+                test: /\.css$/,
+                loader: (isProduction) ?
+                    ExtractTextPlugin.extract(["css-loader"]) : //extract for production
+                    ["style-loader", "css-loader"] //inline styline for dev
+            }
+        ]
     },
     resolve: {
         extensions: ['.js', '.jsx'],
