@@ -1,6 +1,9 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const CleanWebpackPlugin = require("clean-webpack-plugin");
+const Webpack = require("Webpack");
+
+var isProduction = process.env.NODE_ENV === "production";
 
 module.exports = {
     entry: {
@@ -27,10 +30,19 @@ module.exports = {
     plugins: [
         new HtmlWebpackPlugin({
             template: "./client/public/index.html"
-        }),
-        new CleanWebpackPlugin(["dist"], {
-            root: path.join(__dirname, "client"),
-            verbose: true
         })
-    ]
+    ].concat((isProduction) ?
+        //Production only plugins    
+        [
+            new CleanWebpackPlugin(["dist"], {
+                root: path.join(__dirname, "client"),
+                verbose: true
+            }),
+            new Webpack.optimize.UglifyJsPlugin(),
+            new Webpack.LoaderOptionsPlugin({
+                minimize: true
+            })
+        ] :
+        //dev only plugins
+        [])
 }
