@@ -1,6 +1,7 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const CleanWebpackPlugin = require("clean-webpack-plugin");
+const ExtractTextPlugin = require("extract-text-webpack-plugin");
 const Webpack = require("Webpack");
 
 var isProduction = process.env.NODE_ENV === "production";
@@ -8,7 +9,8 @@ var isProduction = process.env.NODE_ENV === "production";
 module.exports = {
     entry: {
         main: [
-            "./client/index.js"
+            "./client/index.js",
+            "./client/app.css"
         ]
     },
     output: {
@@ -45,6 +47,7 @@ module.exports = {
                 root: path.join(__dirname, "client"),
                 verbose: true
             }),
+            new ExtractTextPlugin("[name].css"),
             new Webpack.optimize.UglifyJsPlugin(),
             new Webpack.LoaderOptionsPlugin({
                 minimize: true
