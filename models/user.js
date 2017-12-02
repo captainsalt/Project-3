@@ -12,7 +12,7 @@ const userSchema = new Schema({
   money: {type: Number},
 //   supporters:[{ type: Schema.Types.ObjectId, ref: 'Supporters' }],
 //   supportingThisCreator: [{ type: Schema.Types.ObjectId, ref: 'supportingThisCreator' }],
-//   levels: [{ type: Schema.Types.ObjectId, ref: 'levels' }],
+//   tier: [{ type: Schema.Types.ObjectId, ref: 'levels' }],
 //   marketplace: [{ type: Schema.Types.ObjectId, ref: 'items' }],
 //   pictures: [{ type: Schema.Types.ObjectId, ref: 'pictures' }],
   date: { type: Date, default: Date.now }

@@ -1,3 +1,5 @@
 module.exports = {
-    User: require("./user")
-  };
+  User: require("./user"),
+  Marketplace: require("./marketplace"),
+  Tier: require("./tier")
+};
