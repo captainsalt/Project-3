@@ -1,10 +1,12 @@
 import React, {Component} from 'react';
 // import "./signUp.css";
+import API from "./../../../utils/API";
+
 
 export default class SignUp extends Component {
     // Setting the component's initial state
     state = {
-        userName: "",
+        username: "",
         // firstName: "",
         // lastName: "",
         email: "",
@@ -24,7 +26,7 @@ handleInputChange = (e)=>{
     handleFormSubmit = (e) => {
         // Preventing the default behavior of the form submit (which is to refresh the page)
         e.preventDefault();
-        let nameCheck = !this.state.userName;
+        let nameCheck = !this.state.username;
         if(nameCheck){
             alert(`Please enter your Username`);
         }
@@ -40,12 +42,12 @@ handleInputChange = (e)=>{
         else {
             // Alert the user finish signing up, clear all this.state inputs
             alert(`Sign up complete!`);
-            this.setState({
-                userName: "",
+            API.saveUser({
+                username: this.state.username,
                 // firstName: "",
                 // lastName: "",
-                password: "",
-                email: ""
+                password: this.state.password,
+                email: this.state.email
             });
         };
     };
@@ -55,8 +57,8 @@ handleInputChange = (e)=>{
             <div>
                 <form className="form">
                     <input
-                        value={this.state.userName}
-                        name="userName"
+                        value={this.state.username}
+                        name="username"
                         onChange={this.handleInputChange}
                         type="text"
                         placeholder="Username"
