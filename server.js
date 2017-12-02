@@ -2,9 +2,13 @@ const express = require("express");
 const path = require("path");
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
-const routes = require("./routes");
 const PORT = process.env.PORT || 3001;
 const app = express();
+
+const config = require('./config');
+
+// connect to the database and load models
+require('./server/models').connect(config.dbUri);
 
 // Serve up static assets (usually on heroku)
 if (process.env.NODE_ENV === "production") {
@@ -15,18 +19,25 @@ if (process.env.NODE_ENV === "production") {
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
-// Add routes, both API and view
-app.use(routes);
+app.use(bodyParser.urlencoded({ extended: false }));
+// pass the passport middleware
+app.use(passport.initialize());
 
-// Set up promises with mongoose
-mongoose.Promise = global.Promise;
-// Connect to the Mongo DB
-mongoose.connect(
-  process.env.MONGODB_URI || "mongodb://localhost/FinalProject3",
-  {
-    useMongoClient: true
-  }
-);
+// load passport strategies
+const localSignupStrategy = require('./passport/local-signup');
+const localLoginStrategy = require('./passport/local-login');
+passport.use('local-signup', localSignupStrategy);
+passport.use('local-login', localLoginStrategy);
+
+// pass the authenticaion checker middleware
+const authCheckMiddleware = require('./middleware/auth-check');
+app.use('/api', authCheckMiddleware);
+
+// routes
+const authRoutes = require('./routes/auth');
+const apiRoutes = require('./routes/api');
+app.use('/auth', authRoutes);
+app.use('/api', apiRoutes);
 
 // Send every request to the React app
 // Define any API routes before this runs
