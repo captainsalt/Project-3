@@ -4,8 +4,9 @@ import React, {Component} from 'react';
 export default class SignUp extends Component {
     // Setting the component's initial state
     state = {
-        firstName: "",
-        lastName: "",
+        userName: "",
+        // firstName: "",
+        // lastName: "",
         email: "",
         password: ""
 };
@@ -23,10 +24,13 @@ handleInputChange = (e)=>{
     handleFormSubmit = (e) => {
         // Preventing the default behavior of the form submit (which is to refresh the page)
         e.preventDefault();
-        let nameCheck = !this.state.firstName || !this.state.lastName;
-        if (nameCheck) {
-            alert(`Please enter your first and last name`);
+        let nameCheck = !this.state.userName;
+        if(nameCheck){
+            alert(`Please enter your Username`);
         }
+        // else if (!nameCheck || !this.state.firstName || !this.state.lastName) {
+        //     alert(`Please enter your first and last name`);
+        // }
         else if (!nameCheck && this.state.password.length < 8) {
             alert(`Password length cannot be shorter than 8 characters`);
         }
@@ -37,8 +41,9 @@ handleInputChange = (e)=>{
             // Alert the user finish signing up, clear all this.state inputs
             alert(`Sign up complete!`);
             this.setState({
-                firstName: "",
-                lastName: "",
+                userName: "",
+                // firstName: "",
+                // lastName: "",
                 password: "",
                 email: ""
             });
@@ -48,8 +53,16 @@ handleInputChange = (e)=>{
     render() {
         return (
             <div>
-                <br/>
                 <form className="form">
+                    <input
+                        value={this.state.userName}
+                        name="userName"
+                        onChange={this.handleInputChange}
+                        type="text"
+                        placeholder="Username"
+                    />
+                <br/>
+                {/* <form className="form">
                     <input
                         value={this.state.firstName}
                         name="firstName"
@@ -65,7 +78,7 @@ handleInputChange = (e)=>{
                         onChange={this.handleInputChange}
                         type="text"
                         placeholder="Last Name"
-                    />
+                    /> */}
                     <br/>
                     <br/>
                     <input
