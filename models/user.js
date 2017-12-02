@@ -5,6 +5,7 @@ const userSchema = new Schema({
   _id     : Schema.Types.ObjectId,
   username: { type: String, required: true },
   password: { type: String, required: true },
+  email: { type: String, required: true },
   seller: {type: Boolean, required: true},
   description: {type: String},
   category: {type: String},
