@@ -1,0 +1,17 @@
+[
+    {
+        "id":1,
+        "alttext": "Featured user 1",
+        "imgUrl": "https://farm5.static.flickr.com/4116/4819903224_ce9a6b02f8_b.jpg"
+    },
+    {
+        "id": 2,
+        "alttext": "Featured user 2",
+        "imgUrl": "https://i.pinimg.com/736x/1e/a4/c7/1ea4c7cf2e551d83ba0da9570a8828d4.jpg"
+    },
+    {
+        "id": 3,
+        "alttext": "Featured user 3",
+        "imgUrl": "https://i.pinimg.com/originals/8f/57/2d/8f572d3fced9780ce7003ac94bae6e14.jpg"
+    }
+]
