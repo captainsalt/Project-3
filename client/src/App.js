@@ -5,6 +5,7 @@ import NavbarBS from "./components/navbar";
 import Home from "./components/pages/home";
 import SignUp from "./components/pages/signUp";
 import Login from "./components/pages/login";
+import Discover from "./components/pages/discover";
 
         class App extends Component {
             render() {
@@ -15,6 +16,7 @@ import Login from "./components/pages/login";
                             <Route exact path="/" component={Home} />
                             <Route exact path="/signup" component={SignUp} />
                             <Route exact path="/login" component={Login} />
+                            <Route exact path="/discover" component={Discover} />
                         </div>
                     </Router>
                 );

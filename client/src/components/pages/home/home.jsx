@@ -91,6 +91,7 @@ export default class Home extends Component {
                 </Row>
                 <Panel>
                     <Col xs={12} md={12}>
+                        <br/>
                         <h4>&copy; Team ArtFair 2017</h4>
                     </Col>
                 </Panel>
