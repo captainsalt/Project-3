@@ -8,6 +8,12 @@ export default class Discover extends Component {
     render() {
         return (
             <div>
+                <Row>
+                    <Col xs={12} md={4}>
+                    <h1>Discover New Artists</h1>
+                    <br/>
+                    </Col>
+                    </Row>
                 <Row id="main-container">
                     <Col xs={12} md={3}>
                         <Panel className="art-categories">Paintings</Panel>
