@@ -1,15 +1,10 @@
 const mongoose = require("mongoose");
 const validator = require('validator');
+const Market = require('./marketplace');
+
 const Schema = mongoose.Schema;
 
 const userSchema = new Schema({
-  _id     : Schema.Types.ObjectId,
-  username: { 
-    type: String,
-    required: true,
-    minlength: 3,
-    unique: true
-  },
   password: { 
   	type: String, 
   	required: true,
@@ -28,7 +23,7 @@ const userSchema = new Schema({
   seller: {
   	type: Boolean, 
   	required: true,
-  	default: true,
+  	default: false,
   },
   description: {
   	type: String,
@@ -36,13 +31,15 @@ const userSchema = new Schema({
   },
   category: {
   	type: String,
+    required: true,
+    default: "Art"
   },
   money: {
   	type: Number,
   	default: 20000
   },
   market: [{type: Schema.Types.ObjectId, ref: "Market"}],
-  tiers: [{type: Schema.Types.ObjectId, ref: "Tier"}],  
+  //tiers: [{type: Schema.Types.ObjectId, ref: "Tier"}],  
 //   supporters:[{ type: Schema.Types.ObjectId, ref: 'Supporters' }],
 //   supportingThisCreator: [{ type: Schema.Types.ObjectId, ref: 'supportingThisCreator' }],
 //   pictures: [{ type: Schema.Types.ObjectId, ref: 'pictures' }],

@@ -1,7 +1,8 @@
+const {ObjectID} = require('mongodb');
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
-const {User} = require('./user');
+const User = require('./user');
 
 var marketPlaceSchema = new Schema({
   item: {
@@ -23,4 +24,4 @@ var marketPlaceSchema = new Schema({
 });
 
 var Market = mongoose.model("Market", marketPlaceSchema);
-module.exports = {Market};
+module.exports = Market;
