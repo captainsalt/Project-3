@@ -7,17 +7,25 @@ const User = require('./user');
 var marketPlaceSchema = new Schema({
   item: {
   	type: String,
+    required: true,
   	default: "Item for sale"
   },
   price: {
  	 type: Number,
+   required: true,
    default: "50.00"
   },
   description: {
  	 type: String,
+   required: true,   
  	 default: "Description of item"
   },
-  owner: {
+  pictureUrl: {
+   type: String,
+   //required: true,   
+   default: " "
+  },
+  items: {
   	type: Schema.Types.ObjectId, ref: "User"
   }
 
