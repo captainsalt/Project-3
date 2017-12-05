@@ -1,5 +1,17 @@
-.csl{
-    width:500px;
-    height:400px;
-    /* justify-content: center; */
+.ad1 {
+    height:400px !important;
+    background: url(http://thevanderlust.com/local/images/vanderlust/san_francisco_museum_of_modern_art_9_jpg_1483905256.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
+.ad2 {
+    height:400px !important;
+    background: url(https://i.pinimg.com/originals/f7/81/f8/f781f84a37411064e0421cd74c5781c4.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
