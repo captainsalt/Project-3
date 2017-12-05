@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
-// import "./signUp.css";
+import { Row, Col } from 'react-bootstrap';
+import "./signUp.css";
 import API from "./../../../utils/API";
 
 
@@ -10,12 +11,21 @@ export default class SignUp extends Component {
         // firstName: "",
         // lastName: "",
         email: "",
-        password: ""
+        password: "",
+        occupation: "",
+        comics: "",
+        d_grap: "",
+        glass: "",
+        paint: "",
+        sculpt: "",
+        urban: "",
+        wood: ""
+
 };
 
 handleInputChange = (e)=>{
     // Getting the value and name of the input which triggered the change
-    const value = e.target.value;
+    const value = (e.target.type === 'checkbox') ? e.target.checked : e.target.value;
     const name = e.target.name;
     
     this.setState({
@@ -55,6 +65,11 @@ handleInputChange = (e)=>{
     render() {
         return (
             <div>
+                <Col xs={2} md={4}/>
+                <Col xs={8} md={4}>
+                <label>Please fill in the following: </label>
+                <br/>
+                <br/>
                 <form className="form">
                     <input
                         value={this.state.username}
@@ -63,24 +78,6 @@ handleInputChange = (e)=>{
                         type="text"
                         placeholder="Username"
                     />
-                <br/>
-                {/* <form className="form">
-                    <input
-                        value={this.state.firstName}
-                        name="firstName"
-                        onChange={this.handleInputChange}
-                        type="text"
-                        placeholder="First Name"
-                    />
-                    <br/>
-                    <br/>
-                    <input
-                        value={this.state.lastName}
-                        name="lastName"
-                        onChange={this.handleInputChange}
-                        type="text"
-                        placeholder="Last Name"
-                    /> */}
                     <br/>
                     <br/>
                     <input
@@ -104,9 +101,93 @@ handleInputChange = (e)=>{
                         placeholder="Password" />
                     <br />
                     <br/>
+                    <br/>
+                    <label>
+                        What best describes your occupation?
+                        </label>
+                        <br/>
+                        <br />
+                        <select value={this.state.occupation} onChange={this.handleChange}>
+                            <option value="profartist">Professional Artist</option>
+                            <option value="student">Student</option>
+                            <option value="recartist">Recreational Artist</option>
+                            <option value="arted">Art Educator</option>
+                            <option value="others">Others</option>
+                        </select>
+                    <br />
+                    <br />
+                    <br />
+                    <label>Please select your interests from the options below: </label>
+                    <br/>
+                    <br/>
+                    <label>Comics
+                        <input
+                            name="comics"
+                            type="checkbox"
+                            value={this.state.comics}
+                            onChange={this.handleInputChange} />
+                    </label>
+                    <label>
+                        Digital Graphics
+                        <input
+                            name="d_grap"
+                            type="checkbox"
+                            checked={this.state.d_grap}
+                            onChange={this.handleInputChange} />
+                    </label>
+                    <label>
+                        Glass Media
+                        <input
+                            name="glass"
+                            type="checkbox"
+                            checked={this.state.glass}
+                            onChange={this.handleInputChange} />
+                            </label>
+                    <label>Painting (any media)
+                        <input
+                            name="paint"
+                            type="checkbox"
+                            checked={this.state.paint}
+                            onChange={this.handleInputChange} />
+                            </label>
+                        <label>
+                         Sculptures   
+                        <input
+                            name="sculp"
+                            type="checkbox"
+                            checked={this.state.sculp}
+                            onChange={this.handleInputChange} />
+                        </label>
+                        <label>
+                            Urban Art (Graffiti)
+                        <input
+                            name="urban"
+                            type="checkbox"
+                            checked={this.state.urban}
+                            onChange={this.handleInputChange} />
+                            </label>
+                            <label> Woodworking
+                        <input
+                            name="wood"
+                            type="checkbox"
+                            checked={this.state.wood}
+                            onChange={this.handleInputChange} />
+                    </label>
+                    <br />
+                    <br />
+                    
+                    <br />
+                    <br />
                     <button onClick={this.handleFormSubmit}>Submit</button>
                 </form>
+                </Col>
+                <Col xs={2} md={4} />
             </div>
         );
     }
 }
+
+
+//prevent-default,
+//ffix data,
+//form submit
