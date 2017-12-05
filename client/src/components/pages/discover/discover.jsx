@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Image, Row, Col, Panel} from "react-bootstrap";
+import { Image, Row, Col, Panel } from "react-bootstrap";
 import "./discover.css";
 // import { ListGroupItem } from '../../../../../../../AppData/Local/Microsoft/TypeScript/2.6/node_modules/@types/react-bootstrap';
 import testImages from "../testimages.json";
@@ -10,10 +10,10 @@ export default class Discover extends Component {
             <div>
                 <Row>
                     <Col xs={12} md={4}>
-                    <h1>Discover New Artists</h1>
-                    <br/>
+                        <h1>Discover New Artists</h1>
+                        <br />
                     </Col>
-                    </Row>
+                </Row>
                 <Row id="main-container">
                     <Col xs={12} md={3}>
                         <Panel className="art-categories">Paintings</Panel>
@@ -34,15 +34,15 @@ export default class Discover extends Component {
                                 />
                             </Col>
                             <Col xs={12} md={9}>
-                            <Row className="user-pane">
-                                <h3>Annie May</h3>
-                                <p>Graffiti Artist. I also craft shoes.</p>
-                            </Row>
-                            <Row className="disp-work">
-                                <Image className="samp-work" src={testImages[0].works[0]} circle/>
+                                <Row className="user-pane">
+                                    <h3>Annie May</h3>
+                                    <p>Graffiti Artist. I also craft shoes.</p>
+                                </Row>
+                                <Row className="disp-work">
+                                    <Image className="samp-work" src={testImages[0].works[0]} circle />
                                     <Image className="samp-work" src={testImages[0].works[1]} circle />
                                     <Image className="samp-work" src={testImages[0].works[2]} circle />
-                            </Row>
+                                </Row>
                             </Col>
                         </Panel>
                         <Panel className="cat-user">
