@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import {Image} from "react-bootstrap";
-// import "./login.css";
+import "./login.css";
 
 export default class Login extends Component {
     // Setting the component's initial state

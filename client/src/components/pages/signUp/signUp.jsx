@@ -100,13 +100,10 @@ handleInputChange = (e)=>{
                         type="password"
                         placeholder="Password" />
                     <br />
-                    <br/>
-                    <br/>
+
                     <label>
                         What best describes your occupation?
-                        </label>
-                        <br/>
-                        <br />
+                    </label>
                         <select value={this.state.occupation} onChange={this.handleChange}>
                             <option value="profartist">Professional Artist</option>
                             <option value="student">Student</option>
@@ -115,13 +112,10 @@ handleInputChange = (e)=>{
                             <option value="others">Others</option>
                         </select>
                     <br />
-                    <br />
-                    <br />
                     <label>Please select your interests from the options below: </label>
-                    <br/>
-                    <br/>
                     <label>Comics
                         <input
+                            className="input-art"
                             name="comics"
                             type="checkbox"
                             value={this.state.comics}
@@ -130,6 +124,7 @@ handleInputChange = (e)=>{
                     <label>
                         Digital Graphics
                         <input
+                            className="input-art"
                             name="d_grap"
                             type="checkbox"
                             checked={this.state.d_grap}
@@ -138,6 +133,7 @@ handleInputChange = (e)=>{
                     <label>
                         Glass Media
                         <input
+                            className="input-art"
                             name="glass"
                             type="checkbox"
                             checked={this.state.glass}
@@ -145,6 +141,7 @@ handleInputChange = (e)=>{
                             </label>
                     <label>Painting (any media)
                         <input
+                            className="input-art"
                             name="paint"
                             type="checkbox"
                             checked={this.state.paint}
@@ -153,6 +150,7 @@ handleInputChange = (e)=>{
                         <label>
                          Sculptures   
                         <input
+                            className="input-art"
                             name="sculp"
                             type="checkbox"
                             checked={this.state.sculp}
@@ -161,6 +159,7 @@ handleInputChange = (e)=>{
                         <label>
                             Urban Art (Graffiti)
                         <input
+                            className="input-art"
                             name="urban"
                             type="checkbox"
                             checked={this.state.urban}
@@ -168,15 +167,12 @@ handleInputChange = (e)=>{
                             </label>
                             <label> Woodworking
                         <input
+                            className="input-art"
                             name="wood"
                             type="checkbox"
                             checked={this.state.wood}
                             onChange={this.handleInputChange} />
                     </label>
-                    <br />
-                    <br />
-                    
-                    <br />
                     <br />
                     <button onClick={this.handleFormSubmit}>Submit</button>
                 </form>
@@ -187,7 +183,3 @@ handleInputChange = (e)=>{
     }
 }
 
-
-//prevent-default,
-//ffix data,
-//form submit

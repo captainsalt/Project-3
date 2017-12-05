@@ -3,3 +3,10 @@ form{
     flex-direction: column;
     justify-content: center;
 }
+.input-art {
+    margin-left: 10px !important;
+}
+
+button {
+    margin-bottom: 50px;
+}
