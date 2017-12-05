@@ -1,26 +1,35 @@
+const {ObjectID} = require('mongodb');
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
-const {User} = require('./user');
+const User = require('./user');
 
 var marketPlaceSchema = new Schema({
   item: {
   	type: String,
+    required: true,
   	default: "Item for sale"
   },
   price: {
  	 type: Number,
+   required: true,
    default: "50.00"
   },
   description: {
  	 type: String,
+   required: true,   
  	 default: "Description of item"
   },
-  owner: {
+  pictureUrl: {
+   type: String,
+   //required: true,   
+   default: " "
+  },
+  items: {
   	type: Schema.Types.ObjectId, ref: "User"
   }
 
 });
 
 var Market = mongoose.model("Market", marketPlaceSchema);
-module.exports = {Market};
+module.exports = Market;

@@ -1,0 +1,22 @@
+#main-container{
+    /* height:900px; */
+}
+
+.panel-body{
+    height:326px;
+}
+
+.art-categories{
+    height: 154px;
+    border-width: 1px;
+    border-color: black;
+    /* padding-top:20px;  */
+}
+
+.cat-user {
+    height: 400px;
+}
+
+
+
+
