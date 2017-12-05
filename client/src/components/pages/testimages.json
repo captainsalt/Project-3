@@ -2,7 +2,8 @@
     {
         "id":1,
         "alttext": "Featured user 1",
-        "imgUrl": "https://farm5.static.flickr.com/4116/4819903224_ce9a6b02f8_b.jpg"
+        "imgUrl": "https://farm5.static.flickr.com/4116/4819903224_ce9a6b02f8_b.jpg",
+        "works": ["https://rointheknow.com/wp-content/uploads/2017/11/Graffiti.jpg", "https://i.pinimg.com/736x/6f/0f/2a/6f0f2ae623dc648e2f92533fe5b00570--spray-paint-canvas-spray-painting.jpg", "http://www.cholesburys.co.uk/images/products/sandals/handmade-sandals-105c.jpg"]
     },
     {
         "id": 2,

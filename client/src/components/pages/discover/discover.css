@@ -1,10 +1,10 @@
 #main-container{
-    /* height:900px; */
+    height:900px;
 }
-
+/* 
 .panel-body{
-    height:326px;
-}
+    height:326px !important;
+} */
 
 .art-categories{
     height: 154px;
@@ -14,9 +14,22 @@
 }
 
 .cat-user {
-    height: 400px;
+    height:326px !important;
+    justify-content: space-between;
 }
 
+.disp-art{
+        display: flex;
+    justify-content: space-around;
+    flex-direction:column;
 
+}
 
+.samp-work{
+    height:100px !important;
+    width:100px !important;
+}
 
+.user-pane{
+    
+}
