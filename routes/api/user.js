@@ -10,6 +10,10 @@ router.route("/")
 router.route("/signup")
 .post(usersController.createUser);
 
+// api/users/login 
+// router.route("/login")
+// .get(usersController.);
+
 //api/user/:id
 router
 .route("/:id")
