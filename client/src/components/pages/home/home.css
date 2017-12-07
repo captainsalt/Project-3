@@ -17,3 +17,7 @@ featured{
     display: inline-block;
     line-height: 1em;
 }
+
+.thumbnail{
+    background: #EADDDB;
+}

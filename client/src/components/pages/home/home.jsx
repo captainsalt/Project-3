@@ -4,6 +4,7 @@ import CarouselBS from "../../carousel";
 import "./home.css";
 import testImages from "../testimages.json";
 
+
 export default class Home extends Component {
 
     render() {
@@ -89,12 +90,6 @@ export default class Home extends Component {
                         </p>
                     </Col>
                 </Row>
-                <Panel>
-                    <Col xs={12} md={12}>
-                        <br/>
-                        <h4>&copy; Team Artemistic 2017</h4>
-                    </Col>
-                </Panel>
             </div>
         );
     }

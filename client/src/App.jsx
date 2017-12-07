@@ -7,6 +7,8 @@ import SignUp from "./components/pages/signUp";
 import Login from "./components/pages/login";
 import Discover from "./components/pages/discover";
 import Dashboard from "./components/pages/dashboard";
+// import Footer from "./components/footer";
+
 
 class App extends Component {
     render() {

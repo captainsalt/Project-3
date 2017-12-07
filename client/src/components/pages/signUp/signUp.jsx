@@ -12,22 +12,23 @@ export default class SignUp extends Component {
         // lastName: "",
         email: "",
         password: "",
+        seller: false,
         occupation: "",
-        comics: "",
-        d_grap: "",
-        glass: "",
-        paint: "",
-        sculpt: "",
-        urban: "",
-        wood: ""
-
+        comics:false,
+        d_grap:false,
+        glass:false,
+        paint:false,
+        sculp:false,
+        urban:false,
+        wood:false
 };
+
 
 handleInputChange = (e)=>{
     // Getting the value and name of the input which triggered the change
     const value = (e.target.type === 'checkbox') ? e.target.checked : e.target.value;
     const name = e.target.name;
-    
+    console.log(this.state.interests);
     this.setState({
         [name]: value
     });
@@ -54,10 +55,12 @@ handleInputChange = (e)=>{
             alert(`Sign up complete!`);
             API.saveUser({
                 username: this.state.username,
-                // firstName: "",
-                // lastName: "",
                 password: this.state.password,
-                email: this.state.email
+                email: this.state.email,
+                seller: this.state.seller,
+                //Set default category to be comics
+                category: this.state.comics
+
             });
         };
     };
@@ -100,11 +103,18 @@ handleInputChange = (e)=>{
                         type="password"
                         placeholder="Password" />
                     <br />
-
+                        <label>
+                            *This account is used for:
+                    </label>
+                        <select name="seller" onChange={this.handleInputChange} value={this.state.seller}>
+                            <option value={false}>Buying Art</option>
+                            <option value={true}>Selling Art</option>
+                            </select>
+                    <br/>  
                     <label>
                         What best describes your occupation?
                     </label>
-                        <select value={this.state.occupation} onChange={this.handleChange}>
+                        <select value={this.state.occupation} onChange={this.handleInputChange}>
                             <option value="profartist">Professional Artist</option>
                             <option value="student">Student</option>
                             <option value="recartist">Recreational Artist</option>
@@ -112,7 +122,7 @@ handleInputChange = (e)=>{
                             <option value="others">Others</option>
                         </select>
                     <br />
-                    <label>Please select your interests from the options below: </label>
+                    <label>Please select the art media that you will be selling in: </label>
                     <label>Comics
                         <input
                             className="input-art"
@@ -127,7 +137,7 @@ handleInputChange = (e)=>{
                             className="input-art"
                             name="d_grap"
                             type="checkbox"
-                            checked={this.state.d_grap}
+                                value={this.state.d_grap}
                             onChange={this.handleInputChange} />
                     </label>
                     <label>
@@ -136,7 +146,7 @@ handleInputChange = (e)=>{
                             className="input-art"
                             name="glass"
                             type="checkbox"
-                            checked={this.state.glass}
+                                value={this.state.glass}
                             onChange={this.handleInputChange} />
                             </label>
                     <label>Painting (any media)
@@ -144,7 +154,7 @@ handleInputChange = (e)=>{
                             className="input-art"
                             name="paint"
                             type="checkbox"
-                            checked={this.state.paint}
+                            value={this.state.paint}
                             onChange={this.handleInputChange} />
                             </label>
                         <label>
@@ -153,7 +163,7 @@ handleInputChange = (e)=>{
                             className="input-art"
                             name="sculp"
                             type="checkbox"
-                            checked={this.state.sculp}
+                            value={this.state.sculp}
                             onChange={this.handleInputChange} />
                         </label>
                         <label>
@@ -162,7 +172,7 @@ handleInputChange = (e)=>{
                             className="input-art"
                             name="urban"
                             type="checkbox"
-                            checked={this.state.urban}
+                            value={this.state.urban}
                             onChange={this.handleInputChange} />
                             </label>
                             <label> Woodworking
@@ -170,7 +180,7 @@ handleInputChange = (e)=>{
                             className="input-art"
                             name="wood"
                             type="checkbox"
-                            checked={this.state.wood}
+                            value={this.state.wood}
                             onChange={this.handleInputChange} />
                     </label>
                     <br />
