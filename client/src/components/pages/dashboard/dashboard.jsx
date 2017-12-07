@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import { Image, Row, Col, Panel, ListGroup, ListGroupItem } from "react-bootstrap";
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { Image, Row, Col } from "react-bootstrap";
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import testImages from "../testimages.json";
 import "./dashboard.css"
 
@@ -19,8 +19,8 @@ export default class Dashboard extends Component {
                 <Row>
                     {/* Portrait */}
                     <Col md={5}>
-                        <Image 
-                            id="portrait"    
+                        <Image
+                            id="portrait"
                             src={testImages[0].imgUrl}
                             alt={testImages[0].alttext}
                             responsive
@@ -38,18 +38,9 @@ export default class Dashboard extends Component {
 
                 <Row>
                     <nav id="links">
-                        <li>Patrons</li>
-                        <li>Etsy</li>
+                        <Link to="/dashboard/patrons">Patrons</Link>
+                        <Link to="/dashboard/etsy">Etsy</Link>
                     </nav>
-                </Row>
-
-                <Row>
-                    <Router>
-                        <div>
-                            <Route path="dashboard/1" />
-                            <Route path="dashboard/2" />
-                        </div>
-                    </Router>
                 </Row>
             </div>
         )

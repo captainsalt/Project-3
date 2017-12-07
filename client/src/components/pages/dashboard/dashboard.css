@@ -5,17 +5,18 @@
 
 #links {
     display: inline-flex;
-    align-content: space-around;
+    margin: 5px;
 }
 
-#links li {
-    list-style: none;
+#links * {
+    text-decoration: none;
+    color: black;
     margin: 0 50px;
     font-size: 400%;
 }
 
-#links li:hover {
-    color: white;
-    background: black;
+#links *:hover {
+    background: #b2998e;
+    border-radius: 5px;
     cursor: pointer;
 }
