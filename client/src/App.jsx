@@ -10,6 +10,9 @@ import Dashboard from "./components/pages/dashboard";
 // import Footer from "./components/footer";
 
 
+import Patrons from "./components/patrons";
+import Etsy from "./components/etsy";
+
 class App extends Component {
     render() {
         return (
@@ -20,7 +23,9 @@ class App extends Component {
                     <Route exact path="/signup" component={SignUp} />
                     <Route exact path="/login" component={Login} />
                     <Route exact path="/discover" component={Discover} />
-                    <Route exact path="/dashboard" component={Dashboard} />
+                    <Route path="/dashboard" component={Dashboard} />
+                    <Route path="/dashboard/patrons" component={Patrons} />
+                    <Route path="/dashboard/etsy" component={Etsy} />
                 </div>
             </Router>
         );

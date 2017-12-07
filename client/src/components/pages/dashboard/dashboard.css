@@ -1,0 +1,22 @@
+#portrait {
+    width: 100%;
+    max-height: 500px;
+}
+
+#links {
+    display: inline-flex;
+    margin: 5px;
+}
+
+#links * {
+    text-decoration: none;
+    color: black;
+    margin: 0 50px;
+    font-size: 400%;
+}
+
+#links *:hover {
+    background: #b2998e;
+    border-radius: 5px;
+    cursor: pointer;
+}
