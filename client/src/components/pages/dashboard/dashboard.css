@@ -1,6 +1,6 @@
 #portrait {
-    width: 70%;
-    max-height: 500px;
+    width: 100%;
+    max-height: 450px;
 }
 
 #links {
@@ -19,4 +19,20 @@
     background: #b2998e;
     border-radius: 5px;
     cursor: pointer;
+}
+
+.user-dash-panel {
+    margin-bottom: 50px;
+}
+
+.dash-circle {
+    height: 100px;
+    width: 100px;
+}
+
+.dash-cluster {
+    display: inline-block;
+    height: auto;
+    width: auto;
+    padding: 20px;
 }

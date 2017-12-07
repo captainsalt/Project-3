@@ -25,20 +25,20 @@ export default class Market extends Component {
                             </Col>
                             <Col xs={12} md={4}>
                                 <Row className="user-pane">
-                                    <h3>Annie May</h3>
-                                    <h4>Graffiti Artist. I also craft shoes.</h4>
+                                    <h3>{testImages[0].name}</h3>
+                                    <h4>{testImages[0].autobio}</h4>
                                 </Row>
-                                <Row className="disp-work">
+                                <Row className="user-pane">
                                     <Row>
                                         <h5>Last updated store: 12/01/2017</h5>
-                                        </Row>
+                                    </Row>
                                     <Row>
                                         <h5>Patrons: 7</h5>
                                     </Row>
                                     <Row>
                                         <h5>Contact: erin.schaefer@artemistic.com</h5>
                                     </Row>
-                                                                    </Row>
+                                </Row>
                             </Col>
                             <Col xs={12} md={2}>
                             </Col>
@@ -51,9 +51,11 @@ export default class Market extends Component {
                     <Col xs={12} md={2}>
                     </Col>
                     <Col xs={12} md={8}>
-                    <Panel id="store-panel">
-                    <p>Stuff</p>
-                    </Panel>
+                        <Panel id="store-panel">
+                            {testImages[0].market.forEach(element => {
+                               <span><Image src={element}/></span>  
+                            })}
+                        </Panel>
                     </Col>
                     <Col xs={12} md={2}>
                     </Col>

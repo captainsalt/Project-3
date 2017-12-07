@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Image, Row, Col } from "react-bootstrap";
+import { Image, Row, Col, Panel } from "react-bootstrap";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import testImages from "../testimages.json";
 import "./dashboard.css"
@@ -9,16 +9,18 @@ export default class Dashboard extends Component {
         return (
             <div>
                 {/* Logo row*/}
-                <Row>
+                {/* <Row>
                     <Col md={12}>
                         Logo
                     </Col>
-                </Row>
+                </Row> */}
 
                 {/* Portrait row*/}
-                <Row>
+                <Row className="user-dash-panel">
                     {/* Portrait */}
-                    <Col md={5}>
+                    <Col md={1}>
+                    </Col>
+                    <Col md={3}>
                         <Image
                             id="portrait"
                             src={testImages[0].imgUrl}
@@ -26,21 +28,74 @@ export default class Dashboard extends Component {
                             circle responsive
                         />
                     </Col>
-
-                    {/* informarion*/}
-                    <Col md={7}>
-                        <h2>Title</h2>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse auctor ante ut dui egestas egestas. Ut erat sem, dapibus in leo vitae, rhoncus accumsan massa. Nam quis sem sagittis, condimentum nibh vel, tempus magna. Sed interdum, purus vel venenatis molestie, nibh massa aliquet libero, vitae finibus leo nisl sit amet nunc. Quisque varius elementum neque, vitae faucibus nibh suscipit non. Sed arcu velit, rhoncus eu viverra id, condimentum eu mi. Nunc porta, urna vitae accumsan semper, ex ex auctor nulla, et tincidunt dolor ante quis magna. Vestibulum at ligula non orci laoreet condimentum. Fusce sed tempus ante. Morbi sollicitudin erat non nisl lobortis, id molestie justo vulputate. Praesent nec scelerisque quam, non tristique nunc. Morbi rhoncus, mi eu rhoncus commodo, ligula odio consequat ante, ut tempus nunc quam nec lectus. Nunc porttitor, arcu quis interdum gravida, augue felis laoreet sapien, vitae consequat dui ex sit amet nibh. Mauris vehicula, est et eleifend vehicula, turpis ligula ullamcorper risus, non iaculis odio velit sed odio. Integer vitae lobortis est. Vivamus varius eu libero eget tincidunt.
-                        </p>
+                    <Col md={1}>
+                    </Col>
+                    {/* information*/}
+                    <Col md={6}>
+                        <h2>Hello, {testImages[0].name}</h2>
+                        <h3>Patrons: {testImages[0].patrons}</h3>
+                        <h3>Pieces on sale: {testImages[0].market.length}</h3>
+                    </Col>
+                    <Col md={1}>
                     </Col>
                 </Row>
-
-                <Row>
+                {/* <Row>
                     <nav id="links">
                         <Link to="/dashboard/patrons">Patrons</Link>
                         <Link to="/dashboard/etsy">Etsy</Link>
                     </nav>
+                </Row> */}
+
+                {/* Patron & Etsy Row */}
+                <Row>
+                    <Col md={1}>
+                    </Col>
+                    <Col md={3}>
+                        <h2>My Patrons</h2>
+                        <Panel className="dash-cluster">
+                            <Row>
+                                <Col md={4}>
+                                    <Image className="dash-circle" src={testImages[3].imgUrl} circle responsive />
+                                    <h5>P. Hernandez</h5>
+                                </Col>
+                                <Col md={4}>
+                                    <Image className="dash-circle" src={testImages[4].imgUrl} circle responsive />
+                                    <h5>J. Robinson</h5>
+                                </Col>
+                                <Col md={4}>
+                                    <Image className="dash-circle" src={testImages[5].imgUrl} circle responsive />
+                                    <h5>O. Cortez</h5>
+                                </Col>
+                            </Row>
+                        </Panel>
+                        {/* View More Patrons */}
+                        <Row>
+                            <Col md={12}>
+                                <h4>View More</h4>
+                            </Col>
+                        </Row>
+                    </Col>
+                    <Col md={1}>
+                    </Col>
+                    <Col md={6}>
+                        <h2>My Store</h2>
+                        <Panel className="dash-cluster">
+                            <Col md={4}>
+                                <Image className="dash-circle" src={testImages[0].market[0]} circle responsive />
+                                <h5>Unravel</h5>
+                            </Col>
+                            <Col md={4}>
+                                <Image className="dash-circle" src={testImages[0].market[1]} circle responsive />
+                                <h5>Pride</h5>
+                            </Col>
+                            <Col md={4}>
+                                <Image className="dash-circle" src={testImages[0].market[2]} circle responsive />
+                                <h5>Floral Sandals, Leather</h5>
+                            </Col>
+                        </Panel>
+                    </Col>
+                    <Col md={1}>
+                    </Col>
                 </Row>
             </div>
         )

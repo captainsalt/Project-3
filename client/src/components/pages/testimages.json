@@ -1,9 +1,11 @@
-[
-    {
-        "id":1,
+[{
+        "id": 1,
+        "name": "Erin Schaefer",
+        "patrons": 7,
         "alttext": "Featured user 1",
+        "autobio":"Graffiti Artist. I also craft shoes.",
         "imgUrl": "https://farm5.static.flickr.com/4116/4819903224_ce9a6b02f8_b.jpg",
-        "works": ["https://rointheknow.com/wp-content/uploads/2017/11/Graffiti.jpg", "https://i.pinimg.com/736x/6f/0f/2a/6f0f2ae623dc648e2f92533fe5b00570--spray-paint-canvas-spray-painting.jpg", "http://www.cholesburys.co.uk/images/products/sandals/handmade-sandals-105c.jpg"]
+        "market": ["https://rointheknow.com/wp-content/uploads/2017/11/Graffiti.jpg", "https://i.pinimg.com/736x/6f/0f/2a/6f0f2ae623dc648e2f92533fe5b00570--spray-paint-canvas-spray-painting.jpg", "http://www.cholesburys.co.uk/images/products/sandals/handmade-sandals-105c.jpg"]
     },
     {
         "id": 2,
@@ -14,5 +16,21 @@
         "id": 3,
         "alttext": "Featured user 3",
         "imgUrl": "https://i.pinimg.com/originals/8f/57/2d/8f572d3fced9780ce7003ac94bae6e14.jpg"
+    },
+    {
+        "id": 4,
+        "alttext": "Featured user 4",
+        "imgUrl": "https://www.thefamouspeople.com/profiles/images/oscar-isaac-1.jpg"
+    },
+    {
+        "id": 5,
+        "alttext": "Featured user 5",
+        "imgUrl": "https://i.pinimg.com/736x/31/45/41/314541757718f29dd07f335030103c25--nude-lipstick-on-black-women-dark-complexion-makeup.jpg"
+    },
+    {
+        "id": 6,
+        "alttext": "Featured user 6",
+        "imgUrl": "http://s6.favim.com/orig/65/adorable-beautiful-black-and-white-brunette-Favim.com-607920.jpg"
     }
+
 ]
