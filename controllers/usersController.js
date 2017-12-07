@@ -7,7 +7,7 @@ const {ObjectID} = require('mongodb');
 module.exports = {
 //creates a new user
 createUser (req, res) {
-  var body = _.pick(req.body, ['email', 'username', 'password', 'seller', 'description']);
+  var body = _.pick(req.body, ['email', 'username', 'password', 'seller', 'description', 'category']);
   var user = new User(body);
 
   user.save().then((doc) => {

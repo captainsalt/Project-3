@@ -21,6 +21,29 @@ export default {
 
   loginUser: function(userData) {
     return axios.get("/api/users/login", userData);
+  },
+
+  createUser: function(userData) {
+    return axios.post("/api/users", userData);
+  },
+  getUsers: function() {
+    return axios.get("/api/users")
+  },
+
+  getUser: function(id) {
+    return axios.get('/api/users/'+id);
+  },
+
+  createItem: function(id) {
+    return axios.post('api/users'+id+'/market');
+  },
+
+  getItems: function(id) {
+    return axios.get('api/users'+id+'/market');
+  },
+
+  getCategory: function(category) {
+    return axios.get('api/'+category);
   }
   
 };
