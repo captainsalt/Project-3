@@ -43,7 +43,7 @@ export default {
   },
 
   getCategory: function(category) {
-    return axios.get('api/'+category);
+    return axios.get('api/users/'+category);
   }
   
 };
