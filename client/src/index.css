@@ -54,7 +54,9 @@ p {
   height: 100px !important;
 }
 
-
+.panel{
+  border-radius: 10px;
+}
 
 
 

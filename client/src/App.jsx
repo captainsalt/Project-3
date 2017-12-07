@@ -7,6 +7,7 @@ import SignUp from "./components/pages/signUp";
 import Login from "./components/pages/login";
 import Discover from "./components/pages/discover";
 import Dashboard from "./components/pages/dashboard";
+import Market from "./components/pages/market";
 // import Footer from "./components/footer";
 
 
@@ -21,6 +22,7 @@ class App extends Component {
                     <NavbarBS />
                     <Route exact path="/" component={Home} />
                     <Route exact path="/signup" component={SignUp} />
+                    <Route exact path="/market" component={Market} />
                     <Route exact path="/login" component={Login} />
                     <Route exact path="/discover" component={Discover} />
                     <Route path="/dashboard" component={Dashboard} />

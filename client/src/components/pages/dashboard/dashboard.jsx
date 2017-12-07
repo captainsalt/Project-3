@@ -23,7 +23,7 @@ export default class Dashboard extends Component {
                             id="portrait"
                             src={testImages[0].imgUrl}
                             alt={testImages[0].alttext}
-                            responsive
+                            circle responsive
                         />
                     </Col>
 
