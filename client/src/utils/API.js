@@ -33,15 +33,15 @@ export default {
   getUser: function(id) {
     return axios.get('/api/users/'+id);
   },
-
+  //create item for one user
   createItem: function(id) {
     return axios.post('api/users'+id+'/market');
   },
-
+  //gets the users items
   getItems: function(id) {
     return axios.get('api/users'+id+'/market');
   },
-
+  //gets all users that match the category
   getCategory: function(category) {
     return axios.get('api/users/'+category);
   }
