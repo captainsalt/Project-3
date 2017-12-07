@@ -45,6 +45,11 @@ const userSchema = new Schema({
   	type: Number,
   	default: 20000
   },
+  pictureUrl: {
+   type: String,
+   //required: true,   
+   default: "http://lorempixel.com/200/200/people/"
+  },
   market: [{type: Schema.Types.ObjectId, ref: "Market"}],
   //tiers: [{type: Schema.Types.ObjectId, ref: "Tier"}],  
 //   supporters:[{ type: Schema.Types.ObjectId, ref: 'Supporters' }],

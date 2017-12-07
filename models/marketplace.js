@@ -23,7 +23,7 @@ var marketPlaceSchema = new Schema({
   pictureUrl: {
    type: String,
    //required: true,   
-   default: " "
+   default: "http://lorempixel.com/200/200/"
   },
   items: {
   	type: Schema.Types.ObjectId, ref: "User"

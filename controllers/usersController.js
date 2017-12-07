@@ -79,6 +79,7 @@ createItem (req, res) {
    });//end of save
  },//end of createItem
 
+//returns all items of a specific user
  getItems (req, res) {
   var id = req.params.id;
 
@@ -94,6 +95,18 @@ createItem (req, res) {
    }).catch((e) => {//end of User.find
       res.status(404).send();
    }); 
+ },
+
+//Note-this returns an array of objects
+  getCategory (req, res) {
+  var cat = req.params.category;
+
+  User.find({category: cat}).limit(3).populate('market').then((users) => {
+    console.log(users);
+    res.send(users);
+  }).catch((e) => {
+    res.status(404).send();
+  })
  }
 
 };//end of exports

@@ -14,11 +14,17 @@ router.route("/signup")
 // router.route("/login")
 // .get(usersController.);
 
-//api/user/:id
+//api/users/:category Finds users by description
+router
+ .route("/:category")
+  .get(usersController.getCategory);
+
+//api/users/:id Gets one user by id
 router
 .route("/:id")
   .get(usersController.getUser);
 
+//api/user/:id
 router
  .route("/:id/market")
   .post(usersController.createItem)

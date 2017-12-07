@@ -22,4 +22,5 @@ export default {
   loginUser: function(userData) {
     return axios.get("/api/users/login", userData);
   }
+  
 };
