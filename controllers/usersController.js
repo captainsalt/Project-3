@@ -5,7 +5,7 @@ const {ObjectID} = require('mongodb');
 
 
 module.exports = {
-//creates a new user
+//creates a new user.  Won't be used for presentation
 createUser (req, res) {
   var body = _.pick(req.body, ['email', 'username', 'password', 'seller', 'description']);
   var user = new User(body);
@@ -46,6 +46,7 @@ getUser (req, res) {
    });
 },
 
+//won't be used for presentation
 createItem (req, res) {
   var id = req.params.id;
   console.log(req.body);
@@ -98,12 +99,23 @@ createItem (req, res) {
    }); 
  },
 
-//Note-this returns an array of objects
-  getCategory (req, res) {
+//Note-this returns an array of objects.  Use for nested models. Won't be used for presentation
+ //  getCategory (req, res) {
+ //  var cat = req.params.category;
+ //  console.log("cat: "+cat);
+ //  User.find({category: cat}).limit(3).populate('market').then((users) => {
+ //    console.log(users);
+ //    res.send(users);
+ //  }).catch((e) => {
+ //    res.status(404).send();
+ //  })
+ // }
+
+ getCategory (req, res) {
   var cat = req.params.category;
-  console.log("cat: "+cat);
-  User.find({category: cat}).limit(3).populate('market').then((users) => {
-    console.log(users);
+  console.log("Category: "+cat);
+  User.find({category: cat}).limit(4).then((users) => {
+    console.log("Users: "+users);
     res.send(users);
   }).catch((e) => {
     res.status(404).send();

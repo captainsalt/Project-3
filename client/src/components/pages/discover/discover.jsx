@@ -16,7 +16,7 @@ export default class Discover extends Component {
   }
 
   loadUsers = () => {
-    API.getCategory('c/Paintings')
+    API.getCategory()
       .then(res => {
         this.setState({ users: res.data})
         console.log("In load users: "+this.state);
