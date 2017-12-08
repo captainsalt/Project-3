@@ -31,7 +31,7 @@ export default {
   },
 
   getUser: function(id) {
-    return axios.get('/api/users/'+id);
+    return axios.get("/api/users/"+id);
   },
   //create item for one user
   createItem: function(id) {

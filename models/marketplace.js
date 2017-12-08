@@ -8,22 +8,22 @@ var marketPlaceSchema = new Schema({
   item: {
   	type: String,
     required: true,
-  	default: "Item for sale"
+  	//default: "Item for sale"
   },
   price: {
  	 type: Number,
    required: true,
-   default: "50.00"
+   //default: "50.00"
   },
   description: {
  	 type: String,
    required: true,   
- 	 default: "Description of item"
+ 	 //default: "Description of item"
   },
   pictureUrl: {
    type: String,
    //required: true,   
-   default: "http://lorempixel.com/200/200/"
+   //default: "http://lorempixel.com/100/100/"
   },
   items: {
   	type: Schema.Types.ObjectId, ref: "User"
