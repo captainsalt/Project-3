@@ -10,8 +10,8 @@ body {
   margin: 0;
   padding: 0;
   font-family: Kiona-Regular;
-  background-color: #EADDDB;
-  color: #584B3F;
+  background-color: #7EDBD3;
+  color: #004F5A;
 }
 h1,
 h3,
@@ -20,22 +20,20 @@ h3,
 }
 .navbar,
 .navbar-default .navbar-nav>li>a {
-  background-color: #B2998E; 
-  color: #E1E0E7 !important;
+  background-color: #F6323E; 
+  color: #FFFFFF !important;
 }
 .navbar-brand,
 .navbar-nav>li>a:hover {
-  color: #584B3F !important;
+  color: #771C23 !important;
 }
 .navbar-brand:hover {
-  color: #E1E0E7 !important;
+  color: #FFFFFF !important;
 }
 .carousel-caption {
-  color: #584B3F;
+  color: #004F5A;
 }
-.carousel-indicators li,{
-  background-color: #584B3F;
-}
+
 .thumbnail {
   height: 354px;
 }
@@ -48,7 +46,7 @@ p {
   margin-left: 10px;
 }
 .page-header {
-  background-color: #B2998E;
+  background-color: #02C3B0;
 }
 .panel-body {
   height: 100px !important;
