@@ -48,7 +48,8 @@ const userSchema = new Schema({
     type: Number,
     default:0
   },
-  market: [{type: Schema.Types.ObjectId, ref: "Market"}],
+  market: [],
+  // market: [{type: Schema.Types.ObjectId, ref: "Market"}],
   //tiers: [{type: Schema.Types.ObjectId, ref: "Tier"}],  
 //   supporters:[{ type: Schema.Types.ObjectId, ref: 'Supporters' }],
 //   supportingThisCreator: [{ type: Schema.Types.ObjectId, ref: 'supportingThisCreator' }],

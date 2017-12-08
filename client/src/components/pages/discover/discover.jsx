@@ -73,8 +73,9 @@ export default class Discover extends Component {
                                                 <p>{user.description}</p>
                                             </Row>
                                             <Row className="disp-work">
-                                                <Image className="samp-work" src={user.pictureUrl} circle />
-
+                                                <Image className="samp-work" src={user.market[0].pictureUrl} circle />
+                                                <Image className="samp-work" src={user.market[1].pictureUrl} circle />
+                                                <Image className="samp-work" src={user.market[2].pictureUrl} circle />
                                             </Row>
                                         </Col>
                                     </Panel>
