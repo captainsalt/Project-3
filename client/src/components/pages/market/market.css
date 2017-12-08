@@ -1,8 +1,19 @@
 #store-panel{
     height: 600px;
     background: white;
+    /* display: flex; */
 }
 
 .user pane{
     margin:40px;
+}
+
+
+.item-img{
+        height:200px;
+        width:200px;
+}
+
+.img{
+    margin: 0px;
 }

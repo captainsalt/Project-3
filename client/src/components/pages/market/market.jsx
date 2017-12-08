@@ -52,8 +52,10 @@ export default class Market extends Component {
                     </Col>
                     <Col xs={12} md={8}>
                         <Panel id="store-panel">
-                            {testImages[0].market.forEach(element => {
-                               <span><Image src={element}/></span>  
+                            {testImages[0].market.map(function(element,i){
+                               return(<Col md={4} className="item-img-container">
+                                <Image className="item-img" src={element} key={i} circle responsive/>
+                               </Col>);  
                             })}
                         </Panel>
                     </Col>

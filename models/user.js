@@ -6,7 +6,7 @@ const bcrypt = require('bcrypt-nodejs');
 const Schema = mongoose.Schema;
 
 const userSchema = new Schema({
-  username: {
+  name: {
   	type: String,
     required: true,
     minlength: 1,
@@ -44,11 +44,6 @@ const userSchema = new Schema({
   money: {
   	type: Number,
   	default: 20000
-  },
-  pictureUrl: {
-   type: String,
-   //required: true,   
-   default: "http://lorempixel.com/200/200/people/"
   },
   market: [{type: Schema.Types.ObjectId, ref: "Market"}],
   //tiers: [{type: Schema.Types.ObjectId, ref: "Tier"}],  
