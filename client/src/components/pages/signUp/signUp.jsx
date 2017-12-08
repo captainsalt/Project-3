@@ -26,9 +26,8 @@ export default class SignUp extends Component {
 
 handleInputChange = (e)=>{
     // Getting the value and name of the input which triggered the change
-    const value = (e.target.type === 'checkbox') ? e.target.checked : e.target.value;
-    const name = e.target.name;
-    console.log(this.state.interests);
+    var value = (e.target.type === 'checkbox') ? e.target.checked : e.target.value;
+    var name = e.target.name;
     this.setState({
         [name]: value
     });
