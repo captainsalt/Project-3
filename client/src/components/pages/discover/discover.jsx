@@ -12,24 +12,25 @@ export default class Discover extends Component {
     };
 
     //handle click event
-    handleClick(event) {
+    handleClick = (event) => {
+        console.log(event.target.value)
         var req_params_id = event.target.name;
         var value = event.target.value;
         this.setState({ [req_params_id]: value });
-    }
+    };
 
     componentDidMount() {
         this.loadUsers();
     }
 
-  loadUsers = () => {
-    API.getCategory()
-      .then(res => {
-        this.setState({ users: res.data})
-        console.log("In load users: "+this.state);
-      })
-      .catch(err => console.log(err));
-  };    
+    loadUsers = () => {
+        API.getCategory()
+            .then(res => {
+                this.setState({ users: res.data })
+                console.log("In load users: " + this.state);
+            })
+            .catch(err => console.log(err));
+    };
 
     render() {
         return (
