@@ -13,10 +13,13 @@ export default class Discover extends Component {
 
     //handle click event
     handleClick = (event) => {
-        console.log(event.target.value)
-        var req_params_id = event.target.name;
-        var value = event.target.value;
-        this.setState({ [req_params_id]: value });
+        console.log(event)
+        // var req_params_id = event.target.name;
+        // var value = event.target.value;
+        //this.setState({ [req_params_id]: value });
+        API.getCategory(event).then(res => {
+            this.setState({users: res.data})
+        }).catch(err => console.log(err));
     };
 
     componentDidMount() {
@@ -43,12 +46,12 @@ export default class Discover extends Component {
                 </Row>
                 <Row id="main-container">
                     <Col xs={12} md={3}>
-                        <Panel className="art-categories" req_params_id="paint" onClick={this.handleClick}>Paintings</Panel>
-                        <Panel className="art-categories">Sculptures</Panel>
-                        <Panel className="art-categories">Digital Graphics</Panel>
-                        <Panel className="art-categories">Urban Art</Panel>
-                        <Panel className="art-categories">Comics</Panel>
-                        <Panel className="art-categories">Glass Media</Panel>
+                        <Panel className="art-categories" value="c/paint" onClick={() => this.handleClick("c/paint")}>Paintings</Panel>
+                        <Panel className="art-categories" value="c/sculp" onClick={() => this.handleClick("c/sculp")}>Sculptures</Panel>
+                        <Panel className="art-categories" value= "c/d_grap" onClick={() => this.handleClick("c/d_grap")}>Digital Graphics</Panel>
+                        <Panel className="art-categories" value="c/urban" onClick={() => this.handleClick("c/urban")}>Urban Art</Panel>
+                        <Panel className="art-categories" value="c/comics" onClick={() => this.handleClick("c/comics")}>Comics</Panel>
+                        <Panel className="art-categories" value="c/glass" onClick={() => this.handleClick("c/glass")}>Glass Media</Panel>
                     </Col>
                     <Col xs={12} md={9}>
 
