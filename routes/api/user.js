@@ -5,6 +5,9 @@ const usersController = require("../../controllers/usersController");
 //api/users 
 router.route("/")
   .get(usersController.getUsers)
+
+  //api/users/signup
+router.route("/signup")
   .post(usersController.createUser);
 
 // api/users/:category Finds users by description
