@@ -55,12 +55,10 @@ handleInputChange = (e)=>{
             alert(`Sign up complete!`);
             API.saveUser({
                 username: this.state.username,
+                // firstName: "",
+                // lastName: "",
                 password: this.state.password,
-                email: this.state.email,
-                seller: this.state.seller,
-                //Set default category to be comics
-                category: this.state.comics
-
+                email: this.state.email
             });
         };
     };
