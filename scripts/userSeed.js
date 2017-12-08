@@ -18,29 +18,29 @@ const userSeed = [
     {
         username: "Erin Schaefer",
         email: "eschafer@artfair.com",
-        password: "dsfasdfdf"
-        // description: "Graffiti Artist. I also craft shoes."
-        // market: [
-        //     // {
-        //     //     pictureUrl: "https://rointheknow.com/wp-content/uploads/2017/11/Graffiti.jpg",
-        //     //     description: "Graffiti art made in Jan 2016.",
-        //     //     price: 50,
-        //     //     item: "Unravel"
-        //     // },
-        //     // {
-        //     //     pictureUrl: "https://i.pinimg.com/736x/6f/0f/2a/6f0f2ae623dc648e2f92533fe5b00570--spray-paint-canvas-spray-painting.jpg",
-        //     //     description: "Graffiti art made in Jun 2017.",
-        //     //     price: 40,
-        //     //     item: "Pride"
-        //     // },
-        //     // {
-        //     //     pictureUrl: "http://www.cholesburys.co.uk/images/products/sandals/handmade-sandals-105c.jpg",
-        //     //     description: "Leather sandals handmade in Dec 2016.",
-        //     //     price: 35,
-        //     //     item: "Pride"
-        //     // }
-        // ],
-        // pictureUrl: "https://farm5.static.flickr.com/4116/4819903224_ce9a6b02f8_b.jpg"
+        password: "dsfasdfdf",
+        description: "Graffiti Artist. I also craft shoes.",
+        market: [
+            {
+                pictureUrl: "https://rointheknow.com/wp-content/uploads/2017/11/Graffiti.jpg",
+                description: "Graffiti art made in Jan 2016.",
+                price: 50,
+                item: "Unravel"
+            },
+            {
+                pictureUrl: "https://i.pinimg.com/736x/6f/0f/2a/6f0f2ae623dc648e2f92533fe5b00570--spray-paint-canvas-spray-painting.jpg",
+                description: "Graffiti art made in Jun 2017.",
+                price: 40,
+                item: "Pride"
+            },
+            {
+                pictureUrl: "http://www.cholesburys.co.uk/images/products/sandals/handmade-sandals-105c.jpg",
+                description: "Leather sandals handmade in Dec 2016.",
+                price: 35,
+                item: "Pride"
+            }
+        ],
+        pictureUrl: "https://farm5.static.flickr.com/4116/4819903224_ce9a6b02f8_b.jpg"
     }
     // {
     //     username: "Melissa Brooks",
