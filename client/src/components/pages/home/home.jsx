@@ -25,8 +25,8 @@ export default class Home extends Component {
                                 alt={testImages[0].alttext}
                                 circle
                             />
-                            <h3>Erin Shaefer</h3>
-                            <p>Graffiti Artist. I also handcraft shoes.</p>
+                            <h3 className="artist-head">Erin Shaefer</h3>
+                            <p className="artist">Graffiti Artist. I also handcraft shoes.</p>
                         </Thumbnail>
                     </Col>
                     <Col xs={6} md={4}>
@@ -37,8 +37,8 @@ export default class Home extends Component {
                                 alt={testImages[1].alttext}
                                 circle
                             />
-                            <h3>Melissa Brooks</h3>
-                            <p>Wine lover, cheese maker, and 24/7 graphic designer.</p>
+                            <h3 className="artist-head">Melissa Brooks</h3>
+                            <p className="artist">Wine lover, cheese maker, and 24/7 graphic designer.</p>
                         </Thumbnail>
                     </Col>
                     <Col xs={6} md={4}>
@@ -49,8 +49,8 @@ export default class Home extends Component {
                                 alt={testImages[2].alttext}
                                 circle
                             />
-                            <h3>David Wright</h3>
-                            <p>Comic book nerd. I love drawing comics from scratch.</p>
+                            <h3 className="artist-head">David Wright</h3>
+                            <p className="artist">Comic book nerd. I love drawing comics from scratch.</p>
                         </Thumbnail>
                     </Col>
                 </Row>

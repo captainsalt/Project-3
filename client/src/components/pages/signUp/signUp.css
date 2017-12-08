@@ -9,4 +9,15 @@ form{
 
 button {
     margin-bottom: 50px;
+    background-color: #3B8686; 
+    color: #CEFFCE !important;
+    border-color: #3B8686; 
 }
+input {
+    background-color: #3B8686 !important; 
+    color: #CEFFCE !important; 
+    border-color: #3B8686; 
+}
+input::placeholder {
+    color: #CEFFCE !important;
+  }

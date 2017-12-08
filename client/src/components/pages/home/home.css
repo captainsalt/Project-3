@@ -19,7 +19,7 @@ featured{
 }
 
 .thumbnail{
-    background: #F6323E;
+    background: #3B8686;
 }
 
 h3{
@@ -30,8 +30,9 @@ h3{
     padding: 50px;
 }
 
-h4{
-    text-align: justify;
+h4 {
+    text-align: center !important;
+    margin-top: 0px !important;
 }
 
 .home-content-div{
@@ -41,9 +42,12 @@ h4{
 #cust-share,
 #trans-share,
 #our-share {
-    background-color: #F6323E;
+    background-color: #3B8686;
+    color: #CEFFCE;
 }
-
-/* .page-header{
-    padding: 10px 0px;
-} */
+.artist {
+    color:  #A8DBA8;
+}
+.artist-head {
+    color: #003A44;
+}
