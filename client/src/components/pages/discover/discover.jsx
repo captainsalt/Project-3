@@ -1,10 +1,29 @@
 import React, { Component } from 'react';
 import { Image, Row, Col, Panel } from "react-bootstrap";
 import "./discover.css";
+import { List, ListItem } from "../../List";
+import API from "../../../utils/API";
 // import { ListGroupItem } from '../../../../../../../AppData/Local/Microsoft/TypeScript/2.6/node_modules/@types/react-bootstrap';
 import testImages from "../testimages.json";
 
 export default class Discover extends Component {
+  state = {
+    users: [],
+  };
+
+  componentDidMount() {
+    this.loadUsers();
+  }
+
+  loadUsers = () => {
+    API.getCategory("Sculptures")
+      .then(res => {
+        this.setState({ users: res.data})
+        console.log(this.state);
+      })
+      .catch(err => console.log(err));
+  };    
+
     render() {
         return (
             <div>
@@ -24,55 +43,41 @@ export default class Discover extends Component {
                         <Panel className="art-categories">Glass Media</Panel>
                     </Col>
                     <Col xs={12} md={9}>
+                        
+
+
+
+                {this.state.users.length ? (
+                    <div>
+                    {this.state.users.map(user => (                    
                         <Panel className="cat-user">
                             <Col xs={12} md={3}>
                                 <Image
                                     className="feat-user"
-                                    src={testImages[0].imgUrl}
+                                    src={user.pictureUrl}
                                     alt={testImages[0].alttext}
                                     circle
                                 />
                             </Col>
                             <Col xs={12} md={9}>
                                 <Row className="user-pane">
-                                    <h3>Annie May</h3>
-                                    <p>Graffiti Artist. I also craft shoes.</p>
+                                    <h3>{user.username}</h3>
+                                    <p>{user.description}</p>
                                 </Row>
                                 <Row className="disp-work">
-                                    <Image className="samp-work" src={testImages[0].works[0]} circle />
+                                    <Image className="samp-work" src={user.pictureUrl} circle />
                                     <Image className="samp-work" src={testImages[0].works[1]} circle />
                                     <Image className="samp-work" src={testImages[0].works[2]} circle />
                                 </Row>
-                            </Col>
+                            </Col>                       
                         </Panel>
-                        <Panel className="cat-user">
-                            <Col xs={3} md={3}>
-                                <Image
-                                    className="feat-user"
-                                    src={testImages[0].imgUrl}
-                                    alt={testImages[0].alttext}
-                                    circle
-                                />
-                            </Col>
-                            <Col xs={9} md={9}>
-                                <h3>Annie May</h3>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse auctor ante ut dui egestas egestas. Ut erat sem, dapibus in leo vitae, rhoncus accumsan massa. Nam quis sem sagittis, condimentum nibh vel, tempus magna. Sed interdum, purus vel venenatis molestie, nibh massa aliquet libero, vitae finibus leo nisl sit amet nunc. Quisque varius elementum neque, vitae faucibus nibh suscipit non. Sed arcu velit, rhoncus eu viverra id, condimentum eu mi. Nunc porta, urna vitae accumsan semper, ex ex auctor nulla, et tincidunt dolor ante quis magna. Vestibulum at ligula non orci laoreet condimentum. Fusce sed tempus ante. Morbi sollicitudin erat non nisl lobortis, id molestie justo vulputate. Praesent nec scelerisque quam, non tristique nunc. Morbi rhoncus, mi eu rhoncus commodo, ligula odio consequat ante, ut tempus nunc quam nec lectus. Nunc porttitor, arcu quis interdum gravida, augue felis laoreet sapien, vitae consequat dui ex sit amet nibh. Mauris vehicula, est et eleifend vehicula, turpis ligula ullamcorper risus, non iaculis odio velit sed odio. Integer vitae lobortis est. Vivamus varius eu libero eget tincidunt.</p>
-                            </Col>
-                        </Panel>
-                        <Panel className="cat-user">
-                            <Col xs={3} md={3}>
-                                <Image
-                                    className="feat-user"
-                                    src={testImages[0].imgUrl}
-                                    alt={testImages[0].alttext}
-                                    circle
-                                />
-                            </Col>
-                            <Col xs={9} md={9}>
-                                <h3>Annie May</h3>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse auctor ante ut dui egestas egestas. Ut erat sem, dapibus in leo vitae, rhoncus accumsan massa. Nam quis sem sagittis, condimentum nibh vel, tempus magna. Sed interdum, purus vel venenatis molestie, nibh massa aliquet libero, vitae finibus leo nisl sit amet nunc. Quisque varius elementum neque, vitae faucibus nibh suscipit non. Sed arcu velit, rhoncus eu viverra id, condimentum eu mi. Nunc porta, urna vitae accumsan semper, ex ex auctor nulla, et tincidunt dolor ante quis magna. Vestibulum at ligula non orci laoreet condimentum. Fusce sed tempus ante. Morbi sollicitudin erat non nisl lobortis, id molestie justo vulputate. Praesent nec scelerisque quam, non tristique nunc. Morbi rhoncus, mi eu rhoncus commodo, ligula odio consequat ante, ut tempus nunc quam nec lectus. Nunc porttitor, arcu quis interdum gravida, augue felis laoreet sapien, vitae consequat dui ex sit amet nibh. Mauris vehicula, est et eleifend vehicula, turpis ligula ullamcorper risus, non iaculis odio velit sed odio. Integer vitae lobortis est. Vivamus varius eu libero eget tincidunt.</p>
-                            </Col>
-                        </Panel>
+                        ))}
+                    </div>
+                        ):(
+                          <h3>No Results to Display</h3>
+                )}
+                       
+
                     </Col>
                 </Row>
             </div>

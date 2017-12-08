@@ -20,7 +20,7 @@ createUser (req, res) {
 //gets all users
 getUsers (req, res) {
   User.find({}).then((users) => {
-    res.send({users});
+    res.json(users);
   }).catch((e) => {
     res.status(400).send(e);
   });
@@ -29,7 +29,7 @@ getUsers (req, res) {
 //checks to see if the id entered is valid. Will then find the user with matching id
 getUser (req, res) {
   var id = req.params.id;
-
+    console.log(id);
    if(!ObjectID.isValid(id)) {
     return res.status(404).send();
    }
@@ -40,7 +40,7 @@ getUser (req, res) {
       return res.status(404).send();
     }
 
-    res.send({user});
+    res.json(user);
    }).catch((e) => {
       res.status(404).send();
    });
@@ -48,6 +48,7 @@ getUser (req, res) {
 
 createItem (req, res) {
   var id = req.params.id;
+  console.log(req.body);
   var body = _.pick(['item', 'price', 'description']);
   //var item = new Market(body);
    if(!ObjectID.isValid(id)) {
@@ -61,7 +62,7 @@ createItem (req, res) {
     }
 
     //create new Market item
-    var item = new Market(body);
+    var item = new Market({item: req.body.item, price: req.body.price, description: req.body.description});
     console.log("Item: "+item);
    
     user.market.push(item);

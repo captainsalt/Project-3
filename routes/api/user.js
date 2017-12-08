@@ -4,11 +4,12 @@ const usersController = require("../../controllers/usersController");
 //with .Router
 //api/users 
 router.route("/")
-  .get(usersController.getUsers);
+  .get(usersController.getUsers)
+  .post(usersController.createUser);
 
 // api/users/signup
-router.route("/signup")
-.post(usersController.createUser);
+// router.route("/signup")
+// .post(usersController.createUser);
 
 // api/users/login 
 // router.route("/login")
