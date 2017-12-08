@@ -7,7 +7,7 @@ export default class NavbarBS extends Component {
             <Navbar>
                 <Navbar.Header>
                     <Navbar.Brand>
-                        <a href="/">Artemistic</a>
+                        <a href="/">ArtFair</a>
                     </Navbar.Brand>
                     <Navbar.Toggle />
                 </Navbar.Header>
