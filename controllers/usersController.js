@@ -40,7 +40,7 @@ getUser (req, res) {
       return res.status(404).send();
     }
 
-    res.json(user);
+    res.json({user});
    }).catch((e) => {
       res.status(404).send();
    });
@@ -101,7 +101,7 @@ createItem (req, res) {
 //Note-this returns an array of objects
   getCategory (req, res) {
   var cat = req.params.category;
-
+  console.log("cat: "+cat);
   User.find({category: cat}).limit(3).populate('market').then((users) => {
     console.log(users);
     res.send(users);

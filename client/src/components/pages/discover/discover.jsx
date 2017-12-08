@@ -16,10 +16,10 @@ export default class Discover extends Component {
   }
 
   loadUsers = () => {
-    API.getCategory("Sculptures")
+    API.getCategory('c/Paintings')
       .then(res => {
         this.setState({ users: res.data})
-        console.log(this.state);
+        console.log("In load users: "+this.state);
       })
       .catch(err => console.log(err));
   };    
@@ -66,8 +66,7 @@ export default class Discover extends Component {
                                 </Row>
                                 <Row className="disp-work">
                                     <Image className="samp-work" src={user.pictureUrl} circle />
-                                    <Image className="samp-work" src={testImages[0].works[1]} circle />
-                                    <Image className="samp-work" src={testImages[0].works[2]} circle />
+
                                 </Row>
                             </Col>                       
                         </Panel>
