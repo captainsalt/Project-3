@@ -8,7 +8,6 @@ import Login from "./components/pages/login";
 import Discover from "./components/pages/discover";
 import Dashboard from "./components/pages/dashboard";
 import Market from "./components/pages/market";
-// import Footer from "./components/footer";
 
 
 import Patrons from "./components/patrons";

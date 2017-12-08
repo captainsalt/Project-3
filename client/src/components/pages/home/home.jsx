@@ -4,6 +4,7 @@ import CarouselBS from "../../carousel";
 import "./home.css";
 import testImages from "../testimages.json";
 import ReactSVG from 'react-svg';
+import Footer from './../../footer';
 
 
 export default class Home extends Component {
@@ -184,6 +185,7 @@ export default class Home extends Component {
                         </Row>
                     </Col>
                 </Row>
+                <Footer/>
             </div>
         );
     }
