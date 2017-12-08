@@ -19,7 +19,7 @@ featured{
 }
 
 .thumbnail{
-    background: #EADDDB;
+    background: #F6323E;
 }
 
 h3{
@@ -36,6 +36,12 @@ h4{
 
 .home-content-div{
     padding: 50px 0px;
+}
+
+#cust-share,
+#trans-share,
+#our-share {
+    background-color: #F6323E;
 }
 
 /* .page-header{

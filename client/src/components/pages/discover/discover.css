@@ -9,7 +9,10 @@
 .art-categories{
     height: 154px;
     border-width: 1px;
-    border-color: black;
+    border-color: #771C23;
+    background-color: #F6323E;
+    color: #004F5A;
+
     /* padding-top:20px;  */
 }
 
@@ -19,7 +22,7 @@
 }
 
 .disp-art{
-        display: flex;
+    display: flex;
     justify-content: space-around;
     flex-direction:column;
 

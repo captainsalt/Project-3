@@ -22,14 +22,14 @@ export default class Discover extends Component {
         this.loadUsers();
     }
 
-    loadUsers = () => {
-        API.getCategory('c/Paintings')
-            .then(res => {
-                this.setState({ users: res.data })
-                console.log("In load users: " + this.state);
-            })
-            .catch(err => console.log(err));
-    };
+  loadUsers = () => {
+    API.getCategory()
+      .then(res => {
+        this.setState({ users: res.data})
+        console.log("In load users: "+this.state);
+      })
+      .catch(err => console.log(err));
+  };    
 
     render() {
         return (
@@ -42,7 +42,7 @@ export default class Discover extends Component {
                 </Row>
                 <Row id="main-container">
                     <Col xs={12} md={3}>
-                        <Panel className="art-categories" req_params_id="paint" onClick={handleClick}>Paintings</Panel>
+                        <Panel className="art-categories" req_params_id="paint" onClick={this.handleClick}>Paintings</Panel>
                         <Panel className="art-categories">Sculptures</Panel>
                         <Panel className="art-categories">Digital Graphics</Panel>
                         <Panel className="art-categories">Urban Art</Panel>

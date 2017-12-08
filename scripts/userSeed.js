@@ -40,60 +40,63 @@ const userSeed = [
                 item: "Pride"
             }
         ],
-        pictureUrl: "https://farm5.static.flickr.com/4116/4819903224_ce9a6b02f8_b.jpg"
+        pictureUrl: "https://farm5.static.flickr.com/4116/4819903224_ce9a6b02f8_b.jpg",
+        category: "Art"
+    },
+    {
+        username: "Melissa Brooks",
+        email: "mbrooks@artfair.com",
+        description: "Wine lover, cheese maker, and 24/7 graphic designer.",
+        market: [
+            {
+                pictureUrl: "https://images.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.cleanri.com%2Fpostpic%2F2010%2F11%2Fdigital-graphics_1399795.jpg&f=1",
+                description: "Graphic designed in Aug 2017",
+                price: 15,
+                item: "Wisp"
+            },
+            {
+                pictureUrl: "https://s3.envato.com/files/204204968/img018.jpg",
+                description: "Graphic protrait drawn in Sep 2016.",
+                price: 35,
+                item: "Vivian"
+            },
+            {
+                pictureUrl: "http://cdn2.digitalartsonline.co.uk/cmsdata/slideshow/3513552/polybreno_1500.jpg",
+                description: "Graphic protrait drawn in Apr 2017.",
+                price: 35,
+                item: "Trevor"
+            }
+        ],
+        pictureUrl: "https://i.pinimg.com/736x/1e/a4/c7/1ea4c7cf2e551d83ba0da9570a8828d4.jpg",
+        category: 'Art'
+    },
+    {
+        username: "David Wright",
+        email: "dwright@artfair.com",
+        description: "Comic book nerd. I love drawing comics from scratch.",
+        market: [
+            {
+                pictureUrl: "https://images.duckduckgo.com/iu/?u=http%3A%2F%2Fstatic.boredpanda.com%2Fblog%2Fwp-content%2Fuploads%2F2016%2F12%2Ffunny-relationship-comics-dating-109-5852925ff0825__700.jpg&f=1",
+                description: "Ongoing comic since May 2017",
+                price: 10,
+                item: "Cat on lap series"
+            },
+            {
+                pictureUrl: "https://images.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.leadpaintcomics.com%2Fcomics%2F2010-08-29-basilisk.jpg&f=1",
+                description: "Comic written in 2013. 15 volumes total.",
+                price: 20,
+                item: "Lead Paint series"
+            },
+            {
+                pictureUrl: "https://images.duckduckgo.com/iu/?u=http%3A%2F%2Fth08.deviantart.net%2Ffs70%2FPRE%2Fi%2F2011%2F285%2F1%2Fe%2Fbatman_sketch_by_lgonzalez1-d4cmfba.jpg&f=1",
+                description: "3' X 2' Poster size sketch done in Mar 2014.",
+                price: 15,
+                item: "Batman, Pencil"
+            }
+        ],
+        pictureUrl: "https://i.pinimg.com/originals/8f/57/2d/8f572d3fced9780ce7003ac94bae6e14.jpg",
+        category: "Art"
     }
-    // {
-    //     username: "Melissa Brooks",
-    //     email: "mbrooks@artfair.com",
-    //     description: "Wine lover, cheese maker, and 24/7 graphic designer.",
-    //     market: [
-    //         // {
-    //         //     pictureUrl: "https://images.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.cleanri.com%2Fpostpic%2F2010%2F11%2Fdigital-graphics_1399795.jpg&f=1",
-    //         //     description: "Graphic designed in Aug 2017",
-    //         //     price: 15,
-    //         //     item: "Wisp"
-    //         // },
-    //         // {
-    //         //     pictureUrl: "https://s3.envato.com/files/204204968/img018.jpg",
-    //         //     description: "Graphic protrait drawn in Sep 2016.",
-    //         //     price: 35,
-    //         //     item: "Vivian"
-    //         // },
-    //         // {
-    //         //     pictureUrl: "http://cdn2.digitalartsonline.co.uk/cmsdata/slideshow/3513552/polybreno_1500.jpg",
-    //         //     description: "Graphic protrait drawn in Apr 2017.",
-    //         //     price: 35,
-    //         //     item: "Trevor"
-    //         // }
-    //     ],
-    //     pictureUrl: "https://i.pinimg.com/736x/1e/a4/c7/1ea4c7cf2e551d83ba0da9570a8828d4.jpg"
-    // },
-    // {
-    //     username: "David Wright",
-    //     email: "dwright@artfair.com",
-    //     description: "Comic book nerd. I love drawing comics from scratch.",
-    //     market: [
-    //         // {
-    //         //     pictureUrl: "https://images.duckduckgo.com/iu/?u=http%3A%2F%2Fstatic.boredpanda.com%2Fblog%2Fwp-content%2Fuploads%2F2016%2F12%2Ffunny-relationship-comics-dating-109-5852925ff0825__700.jpg&f=1",
-    //         //     description: "Ongoing comic since May 2017",
-    //         //     price: 10,
-    //         //     item: "Cat on lap series"
-    //         // },
-    //         // {
-    //         //     pictureUrl: "https://images.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.leadpaintcomics.com%2Fcomics%2F2010-08-29-basilisk.jpg&f=1",
-    //         //     description: "Comic written in 2013. 15 volumes total.",
-    //         //     price: 20,
-    //         //     item: "Lead Paint series"
-    //         // },
-    //         // {
-    //         //     pictureUrl: "https://images.duckduckgo.com/iu/?u=http%3A%2F%2Fth08.deviantart.net%2Ffs70%2FPRE%2Fi%2F2011%2F285%2F1%2Fe%2Fbatman_sketch_by_lgonzalez1-d4cmfba.jpg&f=1",
-    //         //     description: "3' X 2' Poster size sketch done in Mar 2014.",
-    //         //     price: 15,
-    //         //     item: "Batman, Pencil"
-    //         // }
-    //     ],
-    //     pictureUrl: "https://i.pinimg.com/originals/8f/57/2d/8f572d3fced9780ce7003ac94bae6e14.jpg"
-    // }
 ];
 
 User
