@@ -39,6 +39,7 @@ const userSeed = [
             }
         ],
         pictureUrl: "https://farm5.static.flickr.com/4116/4819903224_ce9a6b02f8_b.jpg",
+        patrons:7,
         category: "urban"
     },
     {
@@ -67,6 +68,7 @@ const userSeed = [
             }
         ],
         pictureUrl: "https://i.pinimg.com/736x/1e/a4/c7/1ea4c7cf2e551d83ba0da9570a8828d4.jpg",
+        patrons: 6,
         category: 'd_grap'
     },
     {
@@ -95,6 +97,7 @@ const userSeed = [
             }
         ],
         pictureUrl: "https://i.pinimg.com/originals/8f/57/2d/8f572d3fced9780ce7003ac94bae6e14.jpg",
+        patrons: 8,
         category: "comics"
     },
     {
