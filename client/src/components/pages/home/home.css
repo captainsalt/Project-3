@@ -21,3 +21,15 @@ featured{
 .thumbnail{
     background: #EADDDB;
 }
+
+h3{
+    font-weight: bold;
+}
+
+.works-writeup{
+    padding: 50px;
+}
+
+h4{
+    text-align: justify;
+}

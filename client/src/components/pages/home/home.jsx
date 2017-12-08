@@ -3,6 +3,7 @@ import { Image, Row, PageHeader, Col, Thumbnail, Panel } from "react-bootstrap";
 import CarouselBS from "../../carousel";
 import "./home.css";
 import testImages from "../testimages.json";
+import ReactSVG from 'react-svg';
 
 
 export default class Home extends Component {
@@ -58,19 +59,106 @@ export default class Home extends Component {
                     <PageHeader>
                         How It Works
                         </PageHeader>
-                    <Col xs={6} md={4}>
-                        <h3>Lorem Ipsum</h3>
-                    </Col>
-                    <Col xs={12} md={12}>
-                        <p>It is a long established fact that a reader will be distracted by the readable contentof a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
-                            It is a long established fact that a reader will be distracted by the readable contentof a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
-                            It is a long established fact that a reader will be distracted by the readable contentof a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
-                            It is a long established fact that a reader will be distracted by the readable contentof a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
-                            It is a long established fact that a reader will be distracted by the readable contentof a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
-                            It is a long established fact that a reader will be distracted by the readable contentof a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
-                            It is a long established fact that a reader will be distracted by the readable contentof a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
-                        </p>
-                    </Col>
+                    {/* All in one place */}
+                    <Row className="works-writeup">
+                        <Row>
+                            <Col md={1} />
+                            <Col xs={6} md={4}>
+                                <h3>Gallery, Store, Patronage: All in one place.</h3>
+                            </Col>
+                        </Row>
+                        <Row>
+                            <Col md={1} />
+                            <Col xs={12} md={4}>
+                                <h4>ArtFair streamlines the process for artists to demonstrate and trade their creations, while also connecting buyers to the art they enjoy. Even better, ArtFair allows buyers to directly support artists throughout the creative process!</h4>
+                            </Col>
+                            <Col md={2} />
+                            <Col xs={12} md={4}>
+                                <ReactSVG path="./svg/006-shop.svg" callback={svg => console.log(svg)} className="svg-icons" />
+                            </Col>
+                            <Col md={1} />
+                        </Row>
+                    </Row>
+                    {/* Browse and buy here */}
+                    <Row className="works-writeup">
+                        <Row>
+                            <Col md={1} />
+                            <Col xs={6} md={4}>
+                                <h3>Browse and buy here. No more switching sites.</h3>
+                            </Col>
+                        </Row>
+                        <Row>
+                            <Col md={1} />
+                            <Col xs={12} md={4}>
+                                <h4>Browsing artworks on Instagram and paying for them on Paypal? We are making that history by making ArtFair a one-stop shop for browsing and purchasing artworks.</h4>
+                            </Col>
+                            <Col md={2} />
+                            <Col xs={12} md={4}>
+                                <ReactSVG path="./svg/005-panel.svg" callback={svg => console.log(svg)} className="svg-icons" />
+                            </Col>
+                            <Col md={1} />
+                        </Row>
+                    </Row>
+                    {/* You and your art, not ads */}
+                    <Row className="works-writeup">
+                        <Row>
+                            <Col md={1} />
+                            <Col xs={6} md={4}>
+                                <h3>The focus is on you and your art; not ads.</h3>
+                            </Col>
+                        </Row>
+                        <Row>
+                            <Col md={1} />
+                            <Col xs={12} md={4}>
+                                <h4>ArtFair is set up with the artists in mind, not ads. We do not put ads on our pages. We don't share your browsing behavior with third-party dealers, ever.</h4>
+                            </Col>
+                            <Col md={2} />
+                            <Col xs={12} md={4}>
+                                <ReactSVG path="./svg/004-target.svg" callback={svg => console.log(svg)} className="svg-icons" />
+                            </Col>
+                            <Col md={1} />
+                        </Row>
+                    </Row>
+                    {/* Artists earn */}
+                    <Row className="works-writeup">
+                        <Row>
+                            <Col md={1} />
+                            <Col xs={6} md={4}>
+                                <h3>Artists earn, even when nothing is sold.</h3>
+                            </Col>
+                        </Row>
+                        <Row>
+                            <Col md={1} />
+                            <Col xs={12} md={4}>
+                                <h4>ArtFair allows buyers to support their favorite artists with periodic donations, so that artists can pay their bills while they work on something new.</h4>
+                            </Col>
+                            <Col md={2} />
+                            <Col xs={12} md={4}>
+                                <ReactSVG path="./svg/003-money.svg" callback={svg => console.log(svg)} className="svg-icons" />
+                            </Col>
+                            <Col md={1} />
+                        </Row>
+                    </Row>
+                    {/* Generosity */}
+                    <Row className="works-writeup">
+                        <Row>
+                            <Col md={1} />
+                            <Col xs={6} md={4}>
+                                <h3>Generosity begets generosity.</h3>
+                            </Col>
+                        </Row>
+                        <Row>
+                            <Col md={1} />
+                            <Col xs={12} md={4}>
+                                <h4>Artists in ArtFair can reward their patrons with powerful tier-structured perks. Generous support from the buyers is rewarded with generous gifts from the artists!</h4>
+                            </Col>
+                            <Col md={2} />
+                            <Col xs={12} md={4}>
+                                <ReactSVG path="./svg/002-medal.svg" callback={svg => console.log(svg)} className="svg-icons" />
+                            </Col>
+                            <Col md={1} />
+                        </Row>
+                    </Row>
                 </Row>
                 <Row>
                     <PageHeader>
@@ -80,14 +168,9 @@ export default class Home extends Component {
                         <h3>Lorem Ipsum</h3>
                     </Col>
                     <Col xs={12} md={12}>
-                        <p>It is a long established fact that a reader will be distracted by the readable contentof a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
-                            It is a long established fact that a reader will be distracted by the readable contentof a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
-                            It is a long established fact that a reader will be distracted by the readable contentof a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
-                            It is a long established fact that a reader will be distracted by the readable contentof a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
-                            It is a long established fact that a reader will be distracted by the readable contentof a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
-                            It is a long established fact that a reader will be distracted by the readable contentof a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
-                            It is a long established fact that a reader will be distracted by the readable contentof a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
-                        </p>
+                        <Row>
+                            <ReactSVG path="./svg/001-briefcase.svg" callback={svg => console.log(svg)} className="svg-icons" />
+                        </Row>
                     </Col>
                 </Row>
             </div>
