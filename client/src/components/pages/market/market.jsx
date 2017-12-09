@@ -65,10 +65,10 @@ export default class Market extends Component {
                     </Col>
                     {/* Seller info panel is centralized with bootstrap columns */}
                     <Col xs={12} md={8}>                
-                        <Panel className="cat-user">
-                            <Col xs={12} md={3}>
+                        <Panel id="user-info-panel" className="cat-user">
+                            <Col xs={12} md={1}>
                             </Col>
-                            <Col xs={12} md={3}>
+                            <Col xs={12} md={4}>
                                 <Image
                                     className="feat-user"
                                     src={this.state.pictureUrl}
@@ -76,6 +76,7 @@ export default class Market extends Component {
                                     circle
                                 />
                             </Col>
+                                <Col xs={12} md={1}/>
                             <Col xs={12} md={4}>
                                 <Row className="user-pane">
                                     <h3>{this.state.username}</h3>
@@ -122,7 +123,7 @@ export default class Market extends Component {
                     </Col>
                 </Row>
                 </div>
-                })}
+                {/* })} */}
             </div>
         )
     }

@@ -1,11 +1,13 @@
 #store-panel{
-    height: 600px;
+    /* height: 600px; */
+    display: inline-block;
+    width:100%;
     background: white;
     /* display: flex; */
 }
 
-.user pane{
-    margin:40px;
+#user-info-panel{
+    margin:40px 0px;
 }
 
 

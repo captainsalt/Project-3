@@ -207,8 +207,8 @@ const userSeed = [
                 {
                     pictureUrl: "https://images.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.artisoo.com%2Fimages%2Fchinesepainting3%2Fcnag221405.jpg&f=1",
                     description: "Scenery on canvas, finished 2017.",
-                    price: 0,
-                    item: ""
+                    price: 800,
+                    item: "Village"
                 }
             ],
             pictureUrl: "http://images.duckduckgo.com/iu/?u=http%3A%2F%2Fcdn.brosome.com%2Fwp-content%2Fuploads%2F2014%2F11%2FLynn-Hung_00004.jpg&f=1",

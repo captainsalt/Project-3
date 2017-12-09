@@ -19,6 +19,7 @@
 .cat-user {
     height:326px !important;
     justify-content: space-between;
+    padding: 20px 0px;
 }
 
 .disp-art{
@@ -33,6 +34,3 @@
     width:100px !important;
 }
 
-.user-pane{
-    
-}
