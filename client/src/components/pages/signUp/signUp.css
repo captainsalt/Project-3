@@ -14,10 +14,10 @@ button {
     border-color: #3B8686; 
 }
 input {
-    background-color: #3B8686 !important; 
-    color: #CEFFCE !important; 
+    background-color: #FFFFFF !important; 
+    color: #3B8686 !important;
     border-color: #3B8686; 
 }
 input::placeholder {
-    color: #CEFFCE !important;
+    color: #3B8686 !important;
   }
