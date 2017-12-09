@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {Image} from "react-bootstrap";
+import {Image,Col} from "react-bootstrap";
 import "./login.css";
 
 export default class Login extends Component {
@@ -43,9 +43,11 @@ export default class Login extends Component {
         return (
             <div>
                 <br />
-                <Image circle/>
+                {/* <Image circle/> */}
                 <br/>
                 <br />
+                <Col xs={2} md={4} />
+                <Col xs={8} md={4}>
                 <form className="form">
                     <input
                         value={this.state.email}
@@ -70,6 +72,8 @@ export default class Login extends Component {
                     <br />
                     <button onClick={this.handleFormSubmit}>Submit</button>
                 </form>
+                </Col>
+                <Col xs={2} md={4} />
             </div>
         );
     }

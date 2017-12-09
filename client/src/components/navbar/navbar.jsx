@@ -13,7 +13,6 @@ export default class NavbarBS extends Component {
                 </Navbar.Header>
                 <Navbar.Collapse>
                     <Nav>
-                        <NavItem href="/how">How It Works</NavItem>
                         <NavItem href="/signup">Sign Up</NavItem>
                         <NavItem href="/login">Login</NavItem>
                         <NavItem href="/discover">Discover</NavItem>
