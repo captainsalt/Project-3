@@ -5,6 +5,7 @@ import { List, ListItem } from "../../List";
 import API from "../../../utils/API";
 // import { ListGroupItem } from '../../../../../../../AppData/Local/Microsoft/TypeScript/2.6/node_modules/@types/react-bootstrap';
 import testImages from "../testimages.json";
+import { Link } from "react-router-dom";
 
 export default class Discover extends Component {
     state = {
@@ -53,6 +54,7 @@ export default class Discover extends Component {
                         <Panel className="art-categories" value="c/comics" onClick={() => this.handleClick("c/comics")}>Comics</Panel>
                         <Panel className="art-categories" value="c/glass" onClick={() => this.handleClick("c/glass")}>Glass Media</Panel>
                     </Col>
+                    
                     <Col xs={12} md={9}>
 
 
@@ -63,12 +65,14 @@ export default class Discover extends Component {
                                 {this.state.users.map(user => (
                                     <Panel className="cat-user">
                                         <Col xs={12} md={3}>
+                                        <Link to={"/users/" + user._id}>
                                             <Image
                                                 className="feat-user"
                                                 src={user.pictureUrl}
                                                 alt={testImages[0].alttext}
                                                 circle
                                             />
+                                         </Link>
                                         </Col>
                                         <Col xs={12} md={9}>
                                             <Row className="user-pane">
@@ -90,6 +94,7 @@ export default class Discover extends Component {
 
 
                     </Col>
+                   
                 </Row>
             </div>
         );

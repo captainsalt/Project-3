@@ -2,8 +2,30 @@ import React, { Component } from "react";
 import "./market.css";
 import { Row, Col, Panel, Image } from "react-bootstrap";
 import testImages from "../testimages.json";
+import API from "../../../utils/API";
+
+
 
 export default class Market extends Component {
+
+    state = {
+        userdata: {}
+    };
+
+  componentDidMount() {
+    this.loadUsers();
+    }
+
+    loadUsers = () => {
+        API.getUser(this.props.match.params.id)
+        .then(res => {
+            this.setState({ userdata: res.data })
+            console.log("In load users: " + this.state.userdata.user.username);
+        })
+        .catch(err => console.log(err));
+    };
+
+
     render() {
         return (
             <div>
@@ -11,21 +33,21 @@ export default class Market extends Component {
                     <Col xs={12} md={2}>
                     </Col>
                     {/* Seller info panel is centralized with bootstrap columns */}
-                    <Col xs={12} md={8}>
+                    <Col xs={12} md={8}>                
                         <Panel className="cat-user">
                             <Col xs={12} md={3}>
                             </Col>
                             <Col xs={12} md={3}>
                                 <Image
                                     className="feat-user"
-                                    src={testImages[0].imgUrl}
+                                    src={testImages[0].alttext}
                                     alt={testImages[0].alttext}
                                     circle
                                 />
                             </Col>
                             <Col xs={12} md={4}>
                                 <Row className="user-pane">
-                                    <h3>{testImages[0].name}</h3>
+                                    <h3>{this.state.userdata.user.username}</h3>
                                     <h4>{testImages[0].autobio}</h4>
                                 </Row>
                                 <Row className="user-pane">
@@ -36,7 +58,7 @@ export default class Market extends Component {
                                         <h5>Patrons: 7</h5>
                                     </Row>
                                     <Row>
-                                        <h5>Contact: erin.schaefer@artemistic.com</h5>
+                                        <h5>{testImages[0].alttext}</h5>
                                     </Row>
                                 </Row>
                             </Col>
