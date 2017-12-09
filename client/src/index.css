@@ -2,10 +2,12 @@
   font-family: Kiona-Itallic;
   src: url("../src/assets/font/Kiona-Itallic.ttf") format("opentype");
 }
+
 @font-face {
   font-family: Kiona-Regular;
   src: url("../src/assets/font/Kiona-Regular.ttf") format("opentype");
 }
+
 body {
   margin: 0;
   padding: 0;
@@ -13,26 +15,32 @@ body {
   background-color: #A8DBA8;
   color: #06565B;
 }
+
 h1,
 h3,
 .navbar-collapse {
   font-family: Kiona-Itallic;
 }
+
 .navbar,
 .navbar-default .navbar-nav>li>a {
-  background-color: #3B8686; 
+  background-color: #3B8686;
   color: #CEFFCE !important;
 }
+
 .navbar-brand {
   color: #FFFFFF !important;
   font-weight: 800 !important;
 }
+
 .navbar-brand:hover {
   color: #CEFFCE !important;
 }
+
 .navbar-nav>li>a:hover {
   color: #FFFFFF !important;
 }
+
 .carousel-caption {
   color: #3B8686;
 }
@@ -40,26 +48,26 @@ h3,
 .thumbnail {
   height: 354px;
 }
+
 .row {
   margin-left: 0;
   margin-right: 0;
 }
+
 p {
   margin-right: 10px;
   margin-left: 10px;
 }
+
 .page-header {
   background-color: #3B8686;
   color: #CEFFCE !important;
 }
+
 .panel-body {
   height: 100px !important;
 }
 
-.panel{
+.panel {
   border-radius: 10px;
 }
-
-
-
-

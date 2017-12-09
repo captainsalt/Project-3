@@ -16,7 +16,7 @@ export default class Home extends Component {
                 </Row>
                 <PageHeader>Meet Our Creators</PageHeader>
                 <Row className="home-content-div">
-                    <Col xs={6} md={4}>
+                    <Col xs={12} md={4}>
                         <Thumbnail>
                             <Image
                                 className="feat-user"
@@ -25,31 +25,31 @@ export default class Home extends Component {
                                 circle
                             />
                             <h3 className="artist-head">Erin Shaefer</h3>
-                            <p className="artist">Graffiti Artist. I also handcraft shoes.</p>
+                            <p className="artist-des">Graffiti Artist. I also handcraft shoes.</p>
                         </Thumbnail>
                     </Col>
-                    <Col xs={6} md={4}>
+                    <Col xs={12} md={4}>
                         <Thumbnail>
                             <Image
                                 className="feat-user"
                                 src={testImages[1].imgUrl}
                                 alt={testImages[1].alttext}
-                                circle
+                                circle 
                             />
                             <h3 className="artist-head">Melissa Brooks</h3>
-                            <p className="artist">Wine lover, cheese maker, and 24/7 graphic designer.</p>
+                            <p className="artist-des">Wine lover, cheese maker, and 24/7 graphic designer.</p>
                         </Thumbnail>
                     </Col>
-                    <Col xs={6} md={4}>
+                    <Col xs={12} md={4}>
                         <Thumbnail>
                             <Image
                                 className="feat-user"
                                 src={testImages[2].imgUrl}
                                 alt={testImages[2].alttext}
-                                circle
+                                circle 
                             />
                             <h3 className="artist-head">David Wright</h3>
-                            <p className="artist">Comic book nerd. I love drawing comics from scratch.</p>
+                            <p className="artist-des">Comic book nerd. I love drawing comics from scratch.</p>
                         </Thumbnail>
                     </Col>
                 </Row>
@@ -62,7 +62,7 @@ export default class Home extends Component {
                         <Row className="works-writeup">
                             <Row>
                                 <Col md={1} />
-                                <Col xs={6} md={4}>
+                                <Col xs={12} md={4}>
                                     <h3>Gallery, Store, Patronage: All in one place.</h3>
                                 </Col>
                             </Row>
@@ -75,6 +75,8 @@ export default class Home extends Component {
                                 <Col xs={12} md={4}>
                                     <Image
                                         src="https://image.flaticon.com/icons/svg/341/341273.svg"
+                                        className="svg-icons"
+                                        
                                     />
                                 </Col>
                                 <Col md={1} />
@@ -84,7 +86,7 @@ export default class Home extends Component {
                         <Row className="works-writeup">
                             <Row>
                                 <Col md={1} />
-                                <Col xs={6} md={4}>
+                                <Col xs={12} md={4}>
                                     <h3>Browse and buy here. No more switching sites.</h3>
                                 </Col>
                             </Row>
@@ -97,6 +99,8 @@ export default class Home extends Component {
                                 <Col xs={12} md={4}>
                                     <Image
                                         src="https://image.flaticon.com/icons/svg/636/636595.svg"
+                                        className="svg-icons"
+                                        
                                     />    
                                 </Col>
                                 <Col md={1} />
@@ -106,7 +110,7 @@ export default class Home extends Component {
                         <Row className="works-writeup">
                             <Row>
                                 <Col md={1} />
-                                <Col xs={6} md={4}>
+                                <Col xs={12} md={4}>
                                     <h3>The focus is on you and your art; not ads.</h3>
                                 </Col>
                             </Row>
@@ -119,6 +123,8 @@ export default class Home extends Component {
                                 <Col xs={12} md={4}>
                                     <Image
                                         src="https://image.flaticon.com/icons/svg/263/263078.svg"
+                                        className="svg-icons"
+                                        
                                     />    
                                 </Col>
                                 <Col md={1} />
@@ -128,7 +134,7 @@ export default class Home extends Component {
                         <Row className="works-writeup">
                             <Row>
                                 <Col md={1} />
-                                <Col xs={6} md={4}>
+                                <Col xs={12} md={4}>
                                     <h3>Artists earn, even when nothing is sold.</h3>
                                 </Col>
                             </Row>
@@ -141,6 +147,8 @@ export default class Home extends Component {
                                 <Col xs={12} md={4}>
                                     <Image
                                         src="https://image.flaticon.com/icons/svg/639/639416.svg"
+                                        className="svg-icons"
+                                        
                                     />    
                                 </Col>
                                 <Col md={1} />
@@ -150,7 +158,7 @@ export default class Home extends Component {
                         <Row className="works-writeup">
                             <Row>
                                 <Col md={1} />
-                                <Col xs={6} md={4}>
+                                <Col xs={12} md={4}>
                                     <h3>Generosity begets generosity.</h3>
                                 </Col>
                             </Row>
@@ -163,6 +171,8 @@ export default class Home extends Component {
                                 <Col xs={12} md={4}>
                                     <Image
                                         src="https://image.flaticon.com/icons/svg/639/639388.svg"
+                                        className="svg-icons"
+                                        
                                     />    
                                 </Col>
                                 <Col md={1} />
