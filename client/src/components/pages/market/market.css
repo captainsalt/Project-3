@@ -1,0 +1,21 @@
+#store-panel {
+    /* height: 600px; */
+    display: inline-block;
+    width: 100%;
+    background: white;
+    /* display: flex; */
+}
+
+#user-info-panel {
+    margin: 40px 0px;
+}
+
+.item-img {
+    height: 200px;
+    width: 200px;
+    margin: 20px;
+}
+
+.item-img-container {
+    padding: 20px 0px;
+}

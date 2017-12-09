@@ -1,0 +1,51 @@
+#portrait {
+    width: 100%;
+    max-height: 450px;
+    margin: 40px 0px;
+    margin-bottom:60px;
+}
+
+#links {
+    display: inline-flex;
+    margin: 5px;
+}
+
+#links * {
+    text-decoration: none;
+    color: black;
+    margin: 0 50px;
+    font-size: 400%;
+}
+
+#links *:hover {
+    background: #b2998e;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.user-dash-panel {
+    margin-bottom: 0px;
+}
+
+.dash-circle {
+    height: 100px;
+    width: 100px;
+}
+
+.dash-cluster {
+    display: inline-block;
+    height: auto;
+    width: 100%;
+    padding: 20px;
+}
+
+#log-out-btn{
+    margin: 20px 0px;
+    padding: 0px 20px;
+    padding-bottom: 10px;
+    width:100%;
+    background-color: #3B8686;
+    color: #CEFFCE;
+}
+
+

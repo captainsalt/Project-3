@@ -1,0 +1,51 @@
+[{
+        "id": 1,
+        "name": "Erin Schaefer",
+        "patrons": 3,
+        "alttext": "Erin Schaefer",
+        "autobio": "Graffiti Artist. I also craft shoes.",
+        "imgUrl": "https://farm5.static.flickr.com/4116/4819903224_ce9a6b02f8_b.jpg",
+        "market": ["https://rointheknow.com/wp-content/uploads/2017/11/Graffiti.jpg", "https://i.pinimg.com/736x/6f/0f/2a/6f0f2ae623dc648e2f92533fe5b00570--spray-paint-canvas-spray-painting.jpg", "http://www.cholesburys.co.uk/images/products/sandals/handmade-sandals-105c.jpg"]
+    },
+    {
+        "id": 2,
+        "alttext": "Featured user 2",
+        "imgUrl": "https://i.pinimg.com/736x/1e/a4/c7/1ea4c7cf2e551d83ba0da9570a8828d4.jpg"
+    },
+    {
+        "id": 3,
+        "alttext": "Featured user 3",
+        "imgUrl": "https://i.pinimg.com/originals/8f/57/2d/8f572d3fced9780ce7003ac94bae6e14.jpg"
+    },
+    {
+        "id": 4,
+        "alttext": "Featured user 4",
+        "imgUrl": "https://www.thefamouspeople.com/profiles/images/oscar-isaac-1.jpg"
+    },
+    {
+        "id": 5,
+        "alttext": "Featured user 5",
+        "imgUrl": "https://i.pinimg.com/736x/31/45/41/314541757718f29dd07f335030103c25--nude-lipstick-on-black-women-dark-complexion-makeup.jpg"
+    },
+    {
+        "id": 6,
+        "alttext": "Featured user 6",
+        "imgUrl": "http://s6.favim.com/orig/65/adorable-beautiful-black-and-white-brunette-Favim.com-607920.jpg"
+    },
+    {
+        "id": 7,
+        "alttext": "Featured user 7",
+        "imgUrl": "https://images.duckduckgo.com/iu/?u=https%3A%2F%2Fs-media-cache-ak0.pinimg.com%2F736x%2Fee%2F2d%2F06%2Fee2d068c1d6cb0cb9254ec31550042b3.jpg&f=1"
+    },
+    {
+        "id": 8,
+        "alttext": "Featured user 8",
+        "imgUrl": "https://images.duckduckgo.com/iu/?u=https%3A%2F%2Fi.pinimg.com%2F736x%2F10%2Fb3%2F6a%2F10b36a58d0a35dbccc9ce18c16d85a7e--redhead-girl-red-heads.jpg&f=1"
+    },
+    {
+        "id": 9,
+        "alttext": "Featured user 9",
+        "imgUrl": "http://images.duckduckgo.com/iu/?u=http%3A%2F%2Fcdn.brosome.com%2Fwp-content%2Fuploads%2F2014%2F11%2FLynn-Hung_00004.jpg&f=1"
+    }
+
+]

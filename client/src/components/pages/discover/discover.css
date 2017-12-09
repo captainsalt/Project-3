@@ -1,0 +1,86 @@
+#main-container{
+    height:900px;
+}
+
+.art-categories{
+    height: 154px;
+    border-width: 1px;
+    border-color: #CEFFCE;
+    background: #FFFFFF;
+    color: rgb(0, 0, 0);
+    padding-top:20px; 
+}
+
+.discover-cat{
+    font-weight: bolder;
+}
+
+.cat-user {
+    height:326px !important;
+    justify-content: space-between;
+    padding: 20px 0px;
+}
+
+.disp-art{
+    display: flex;
+    justify-content: space-around;
+    flex-direction:column;
+
+}
+
+.samp-work{
+    height:100px !important;
+    width:100px !important;
+}
+
+#pnt {
+    background: url("https://images.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.jpost.com%2FHttpHandlers%2FShowImage.ashx%3Fid%3D262437%26h%3D530%26w%3D758&f=1") top;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+#scp{
+    background: url("https://images.duckduckgo.com/iu/?u=http%3A%2F%2Fwoodworkessence.com%2Fwp-content%2Fuploads%2F2011%2F03%2Fsculpture-wolves.jpg&f=1") center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+#dgg {
+    background: url("https://images.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.shadd.com%2Fcontent%2Fuploads%2Fcomputer-graphics-4.jpg&f=1") top;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+#urb {
+    background: url("http://www.buro247.me/thumb/640x960_8/images/seven-banksy-works-removed-from-public-walls-to-be-auctioned-off-1.jpg") center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+#com {
+    background: url("https://t4.ftcdn.net/jpg/00/92/03/45/240_F_92034512_UM1uplqTlntUwaBndgEEqxb4UjetfRH0.jpg") center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+#gls {
+    background: url("https://images.duckduckgo.com/iu/?u=http%3A%2F%2F3.bp.blogspot.com%2F-grfOapMfVHo%2FVJgusE2FVNI%2FAAAAAAAA34o%2F2fh-ngwlTnQ%2Fw1200-h630-p-k-no-nu%2F01.jpg&f=1") bottom;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+#pnt, #scp, #dgg, #com, #urb, #gls{
+    opacity: 0.75;
+}

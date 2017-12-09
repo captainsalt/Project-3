@@ -1,0 +1,23 @@
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.input-art {
+    margin-left: 10px !important;
+}
+
+button {
+    margin-bottom: 50px;
+    background-color: #3B8686; 
+    color: #CEFFCE !important;
+    border-color: #3B8686; 
+}
+input {
+    background-color: #FFFFFF !important; 
+    color: #3B8686 !important;
+    border-color: #3B8686; 
+}
+input::placeholder {
+    color: #3B8686 !important;
+  }
