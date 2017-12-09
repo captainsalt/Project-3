@@ -76,7 +76,7 @@ handleInputChange = (e)=>{
                         name="username"
                         onChange={this.handleInputChange}
                         type="text"
-                        placeholder="Username"
+                        placeholder="Full Name"
                     />
                     <br/>
                     <br/>
