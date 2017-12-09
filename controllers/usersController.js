@@ -40,7 +40,12 @@ getUser (req, res) {
       return res.status(404).send();
     }
 
-    res.json({user});
+    // console.log(user);
+    var blah = [user.username, user.email, user.pictureUrl, user.password]
+
+    console.log(blah)
+
+    res.send(blah);
    }).catch((e) => {
       res.status(404).send();
    });
