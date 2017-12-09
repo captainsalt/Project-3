@@ -38,11 +38,11 @@ const userSchema = new Schema({
   category: {
   	type: String,
     required: true,
-    default: "Art"
+    default: "paint"
   },
   money: {
   	type: Number,
-  	default: 2000
+  	default: 0
   },
   patrons: {
     type: Number,

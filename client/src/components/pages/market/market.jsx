@@ -48,7 +48,7 @@ export default class Market extends Component {
         for (i = 0; i < this.state.marketItems.length; i++) {
             items.push(
             <Col md={4} className="item-img-container">
-            <Image className="item-img" src={this.state.marketItems[i].pictureUrl} circle responsive/>
+            <Image className="item-img" src={this.state.marketItems[i].pictureUrl} circle/>
             <Row><p>{this.state.marketItems[i].item}</p></Row>
             <Row><p>${this.state.marketItems[i].price}</p></Row>
             <Row><p>{this.state.marketItems[i].description}</p></Row>
