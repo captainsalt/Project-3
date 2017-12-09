@@ -6,6 +6,7 @@ import Home from "./components/pages/home";
 import SignUp from "./components/pages/signUp";
 import Login from "./components/pages/login";
 import Discover from "./components/pages/discover";
+import DemoLogin from "./components/pages/demologin";
 import Dashboard from "./components/pages/dashboard";
 import Market from "./components/pages/market";
 
@@ -25,7 +26,8 @@ class App extends Component {
                     <Route exact path="/login" component={Login} />
                     <Route exact path="/discover" component={Discover} />
                     <Route exact path="/users/:id" component={Market} />
-                    <Route exact path="/dashboard" component={Dashboard} />
+                    <Route exact path="/dashboard/eschaefer" component={Dashboard} />
+                    <Route exact path="/dashboard/gchan" component={DemoLogin} />
                     <Route path="/dashboard/patrons" component={Patrons} />
                     <Route path="/dashboard/etsy" component={Etsy} />
                 </div>

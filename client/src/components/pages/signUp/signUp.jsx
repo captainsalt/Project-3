@@ -44,14 +44,14 @@ handleInputChange = (e)=>{
         //     alert(`Please enter your first and last name`);
         // }
         else if (!nameCheck && this.state.password.length < 8) {
-            alert(`Password length cannot be shorter than 8 characters`);
+            // alert(`Password length cannot be shorter than 8 characters`);
         }
         else if (!nameCheck && !this.state.email) {
             alert(`Email cannot be blank`);
         }
         else {
             // Alert the user finish signing up, clear all this.state inputs
-            alert(`Sign up complete!`);
+            // alert(`Sign up complete!`);
             API.saveUser({
                 username: this.state.username,
                 // firstName: "",
@@ -59,6 +59,7 @@ handleInputChange = (e)=>{
                 password: this.state.password,
                 email: this.state.email
             });
+            window.location = "/dashboard/gchan";
         };
     };
 

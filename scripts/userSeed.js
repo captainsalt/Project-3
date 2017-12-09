@@ -39,7 +39,7 @@ const userSeed = [
             }
         ],
         pictureUrl: "https://farm5.static.flickr.com/4116/4819903224_ce9a6b02f8_b.jpg",
-        patrons:7,
+        patrons:3,
         category: "urban"
     },
     {

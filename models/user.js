@@ -38,7 +38,7 @@ const userSchema = new Schema({
   category: {
   	type: String,
     required: true,
-    default: "paint"
+    default: "art"
   },
   money: {
   	type: Number,

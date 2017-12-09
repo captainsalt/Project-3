@@ -2,11 +2,45 @@ import React, { Component } from 'react';
 import { Image, Row, Col, Panel, Button } from "react-bootstrap";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import testImages from "../testimages.json";
-import "./dashboard.css"
+import "./dashboard.css";
+import API from "../../../utils/API";
+
 
 export default class Dashboard extends Component {
+            // set up shop to load mongo, incomplete because cannot get id
+    state = {
+        username: [],
+        email: [],
+        bio: [],
+        pictureUrl: [],
+        patrons: [],
+        marketItems: [],
+        date: []
+    }
+
+    componentDidMount() {
+        this.loadUsers();
+    }
+
+    loadUsers = () => {
+        API.getUser(this.props.match.params.id)
+            .then(res => {
+                this.setState({
+                    username: res.data.username,
+                    email: res.data.email,
+                    bio: res.data.description,
+                    patrons: res.data.patrons,
+                    pictureUrl: res.data.pictureUrl,
+                    date: res.data.date,
+                    marketItems: res.data.market
+                })
+                console.log("In load users: " + this.state.marketItems.length);
+            })
+            .catch(err => console.log(err));
+    };
+
+
     render() {
-        // set up shop to load mongo
 
         return (
             <div>
@@ -79,16 +113,16 @@ export default class Dashboard extends Component {
                             <Panel className="dash-cluster">
                                 <Row>
                                     <Col md={4}>
-                                        <Image className="dash-circle" src={testImages[3].imgUrl} circle />
-                                        <h5>P. Hernandez</h5>
+                                        <Image className="dash-circle" src={testImages[6].imgUrl} circle />
+                                        <h5>G. Swansen</h5>
                                     </Col>
                                     <Col md={4}>
-                                        <Image className="dash-circle" src={testImages[4].imgUrl} circle />
-                                        <h5>J. Robinson</h5>
+                                        <Image className="dash-circle" src={testImages[7].imgUrl} circle />
+                                        <h5>A. Gallagher</h5>
                                     </Col>
                                     <Col md={4}>
-                                        <Image className="dash-circle" src={testImages[5].imgUrl} circle />
-                                        <h5>O. Cortez</h5>
+                                        <Image className="dash-circle" src={testImages[8].imgUrl} circle />
+                                        <h5>K. Wu</h5>
                                     </Col>
                                 </Row>
                             </Panel>

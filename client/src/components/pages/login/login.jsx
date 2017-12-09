@@ -27,15 +27,16 @@ export default class Login extends Component {
             alert(`Please enter your password`);
         }
         else if (!pwCheck && !this.state.email) {
-            alert(`Please enter your password`);
+            alert(`Please enter your email`);
         }
         else {
             // clear `this.state.password` and `this.state.email`
-            alert(`Welcome!`);
+            // alert(`Welcome!`);
             this.setState({
                 password: "",
                 email: ""
             });
+            window.location = "/dashboard/eschaefer";
         };
     };
 

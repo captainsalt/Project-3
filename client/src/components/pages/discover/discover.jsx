@@ -89,7 +89,7 @@ export default class Discover extends Component {
                                 ))}
                             </div>
                         ) : (
-                                <h3>No Results to Display</h3>
+                                <h3>What are you waiting for? Look around!</h3>
                             )}
 
 
