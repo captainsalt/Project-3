@@ -20,7 +20,6 @@ export default class Market extends Component {
 
   componentDidMount() {
     this.loadUsers();
-    this.loadMarket()
     }
 
     loadUsers = () => {
@@ -31,30 +30,33 @@ export default class Market extends Component {
                             bio: res.data.description,
                             patrons: res.data.patrons,
                             pictureUrl: res.data.pictureUrl,
-                            date: res.data.date})
-            console.log("In load users: " + this.state.username);
+                            date: res.data.date,
+                            marketItems: res.data.market})
+            console.log("In load users: " + this.state.marketItems.length);
         })
         .catch(err => console.log(err));
     };
-
-    loadMarket = () => {
-        API.getItems(this.props.match.params.id)
-        .then(res => {
-            // this.setState({ username: res.data.username,
-            //                 email: res.data.email,
-            //                 bio: res.data.description,
-            //                 patrons: res.data.patrons,
-            //                 pictureUrl: res.data.pictureUrl})
-            console.log("In load market: " + res.data);
-        })
-        .catch(err => console.log(err));
-    }
 
 
     render() {
         // if (this.state.users.length > 0) {
         //     console.log(this.state.users[0].user.username)
         // }
+
+        let i;
+        let items = []
+        for (i = 0; i < this.state.marketItems.length; i++) {
+            items.push(
+            <Col md={4} className="item-img-container">
+            <Image className="item-img" src={this.state.marketItems[i].pictureUrl} circle responsive/>
+            <Row><p>{this.state.marketItems[i].item}</p></Row>
+            <Row><p>${this.state.marketItems[i].price}</p></Row>
+            <Row><p>{this.state.marketItems[i].description}</p></Row>
+            </Col>
+           )
+           console.log(items);
+        }
+
         return (
             <div>
                 <div>
@@ -111,7 +113,7 @@ export default class Market extends Component {
                                </Col>);  
                             })} */}
                             {
-                                
+                                items
                             }
                         </Panel>
                     </Col>
