@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import {Image,Col} from "react-bootstrap";
 import "./login.css";
+import { Link } from "react-router-dom";
 
 export default class Login extends Component {
     // Setting the component's initial state
@@ -71,7 +72,9 @@ export default class Login extends Component {
                         placeholder="Password" />
                     <br />
                     <br />
-                    <button onClick={this.handleFormSubmit}>Submit</button>
+                    <Link to="/dashboard/eschaefer">
+                    <button>Submit</button>
+                    </Link>
                 </form>
                 </Col>
                 <Col xs={2} md={4} />

@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import { Row, Col } from 'react-bootstrap';
 import "./signUp.css";
 import API from "./../../../utils/API";
+import { Link } from "react-router-dom";
 
 
 export default class SignUp extends Component {
@@ -182,7 +183,9 @@ handleInputChange = (e)=>{
                             onChange={this.handleInputChange} />
                     </label>
                     <br />
-                    <button onClick={this.handleFormSubmit}>Submit</button>
+                    <Link to="/dashboard/gchan">
+                    <button>Submit</button>
+                        </Link>
                 </form>
                 </Col>
                 <Col xs={2} md={4} />
