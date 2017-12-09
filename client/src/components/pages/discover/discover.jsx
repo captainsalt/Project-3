@@ -47,12 +47,12 @@ export default class Discover extends Component {
                 </Row>
                 <Row id="main-container">
                     <Col xs={12} md={3}>
-                        <Panel className="art-categories" value="c/paint" onClick={() => this.handleClick("c/paint")}>Paintings</Panel>
-                        <Panel className="art-categories" value="c/sculp" onClick={() => this.handleClick("c/sculp")}>Sculptures</Panel>
-                        <Panel className="art-categories" value= "c/d_grap" onClick={() => this.handleClick("c/d_grap")}>Digital Graphics</Panel>
-                        <Panel className="art-categories" value="c/urban" onClick={() => this.handleClick("c/urban")}>Urban Art</Panel>
-                        <Panel className="art-categories" value="c/comics" onClick={() => this.handleClick("c/comics")}>Comics</Panel>
-                        <Panel className="art-categories" value="c/glass" onClick={() => this.handleClick("c/glass")}>Glass Media</Panel>
+                        <Panel id="pnt" className="art-categories" value="c/paint" onClick={() => this.handleClick("c/paint")}><h3>Paintings</h3></Panel>
+                        <Panel id="scp" className="art-categories" value="c/sculp" onClick={() => this.handleClick("c/sculp")}><h3>Sculptures</h3></Panel>
+                        <Panel id="dgg"className="art-categories" value= "c/d_grap" onClick={() => this.handleClick("c/d_grap")}><h3>Digital Graphics</h3></Panel>
+                        <Panel id="urb" className="art-categories" value="c/urban" onClick={() => this.handleClick("c/urban")}><h3>Urban Art</h3></Panel>
+                        <Panel id="com" className="art-categories" value="c/comics" onClick={() => this.handleClick("c/comics")}><h3>Comics</h3></Panel>
+                        <Panel id="gls" className="art-categories" value="c/glass" onClick={() => this.handleClick("c/glass")}><h3>Glass Media</h3></Panel>
                     </Col>
                     
                     <Col xs={12} md={9}>
