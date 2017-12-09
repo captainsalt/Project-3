@@ -82,13 +82,14 @@ export default class Market extends Component {
                                 </Row>
                                 <Row className="user-pane">
                                     <Row>
-                                        <h5>Last updated store: {this.state.date}</h5>
+                                            {/* reformat ugly mongoose date to nice format */}
+                                            <h5>Last updated store: {this.state.date.toString().slice(0,10).split("-").reverse().join("/")}</h5>
                                     </Row>
                                     <Row>
-                                        <h5>{this.state.patrons}</h5>
+                                        <h5>Patrons: {this.state.patrons}</h5>
                                     </Row>
                                     <Row>
-                                        <h5>{this.state.email}</h5>
+                                        <h5>Contact: {this.state.email}</h5>
                                     </Row>
                                 </Row>
                             </Col>
