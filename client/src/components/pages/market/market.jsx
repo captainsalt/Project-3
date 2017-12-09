@@ -3,13 +3,13 @@ import "./market.css";
 import { Row, Col, Panel, Image } from "react-bootstrap";
 import testImages from "../testimages.json";
 import API from "../../../utils/API";
-
+// import testImages from "../../testimages.json"
 
 
 export default class Market extends Component {
 
     state = {
-        userdata: {}
+        userdata: []
     };
 
   componentDidMount() {
@@ -19,8 +19,9 @@ export default class Market extends Component {
     loadUsers = () => {
         API.getUser(this.props.match.params.id)
         .then(res => {
+            // console.log(res);
             this.setState({ userdata: res.data })
-            console.log("In load users: " + this.state.userdata.user.username);
+            // console.log("In load users: " + this.state.userdata.user.username);
         })
         .catch(err => console.log(err));
     };
@@ -29,6 +30,8 @@ export default class Market extends Component {
     render() {
         return (
             <div>
+                {this.state.userdata.map(function(user){
+                <div>
                 <Row>
                     <Col xs={12} md={2}>
                     </Col>
@@ -40,25 +43,25 @@ export default class Market extends Component {
                             <Col xs={12} md={3}>
                                 <Image
                                     className="feat-user"
-                                    src={testImages[0].alttext}
-                                    alt={testImages[0].alttext}
+                                    src={user.pictureUrl}
+                                    alt={user.username}
                                     circle
                                 />
                             </Col>
                             <Col xs={12} md={4}>
                                 <Row className="user-pane">
-                                    <h3>{this.state.userdata.user.username}</h3>
-                                    <h4>{testImages[0].autobio}</h4>
+                                    <h3>{user.username}</h3>
+                                    <h4>{user.description}</h4>
                                 </Row>
                                 <Row className="user-pane">
                                     <Row>
-                                        <h5>Last updated store: 12/01/2017</h5>
+                                        <h5>Last updated store: {user.date}</h5>
                                     </Row>
                                     <Row>
-                                        <h5>Patrons: 7</h5>
+                                        <h5>Patrons: {user.patrons}}</h5>
                                     </Row>
                                     <Row>
-                                        <h5>{testImages[0].alttext}</h5>
+                                        <h5>Contact: {user.email}</h5>
                                     </Row>
                                 </Row>
                             </Col>
@@ -74,9 +77,10 @@ export default class Market extends Component {
                     </Col>
                     <Col xs={12} md={8}>
                         <Panel id="store-panel">
-                            {testImages[0].market.map(function(element,i){
+                            {user.market.map(function(element,i){
                                return(<Col md={4} className="item-img-container">
-                                <Image className="item-img" src={element} key={i} circle responsive/>
+                                <Image className="item-img" src={element.pictureUrl} key={i} circle responsive/>
+                               <Row><p>{element.item}</p></Row>
                                </Col>);  
                             })}
                         </Panel>
@@ -84,6 +88,8 @@ export default class Market extends Component {
                     <Col xs={12} md={2}>
                     </Col>
                 </Row>
+                </div>
+                })}
             </div>
         )
     }
