@@ -93,7 +93,7 @@ createItem (req, res) {
   var id = req.params.id;
 
   if(!ObjectID.isValid(id)) {
-      return res.status(404).send();
+      return res.status(404).send(e);
    }
 
    User.findById(id)
@@ -102,7 +102,7 @@ createItem (req, res) {
      console.log(user.market);  
      res.json(user.market);
    }).catch((e) => {//end of User.find
-      res.status(404).send();
+      res.status(404).send(e);
    }); 
  },
 
