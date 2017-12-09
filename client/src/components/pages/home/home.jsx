@@ -3,7 +3,6 @@ import { Image, Row, PageHeader, Col, Thumbnail, Panel, Jumbotron } from "react-
 import CarouselBS from "../../carousel";
 import "./home.css";
 import testImages from "../testimages.json";
-import ReactSVG from 'react-svg';
 import Footer from './../../footer';
 
 
@@ -13,7 +12,7 @@ export default class Home extends Component {
         return (
             <div>
                 <Row className="home-content-div">
-                <CarouselBS />
+                    <CarouselBS />
                 </Row>
                 <PageHeader>Meet Our Creators</PageHeader>
                 <Row className="home-content-div">
@@ -74,7 +73,9 @@ export default class Home extends Component {
                                 </Col>
                                 <Col md={2} />
                                 <Col xs={12} md={4}>
-                                    <ReactSVG path="./svg/006-shop.svg" callback={svg => console.log(svg)} className="svg-icons" />
+                                    <Image
+                                        src="https://image.flaticon.com/icons/svg/341/341273.svg"
+                                    />
                                 </Col>
                                 <Col md={1} />
                             </Row>
@@ -94,7 +95,9 @@ export default class Home extends Component {
                                 </Col>
                                 <Col md={2} />
                                 <Col xs={12} md={4}>
-                                    <ReactSVG path="./svg/005-panel.svg" callback={svg => console.log(svg)} className="svg-icons" />
+                                    <Image
+                                        src="https://image.flaticon.com/icons/svg/636/636595.svg"
+                                    />    
                                 </Col>
                                 <Col md={1} />
                             </Row>
@@ -114,7 +117,9 @@ export default class Home extends Component {
                                 </Col>
                                 <Col md={2} />
                                 <Col xs={12} md={4}>
-                                    <ReactSVG path="./svg/004-target.svg" callback={svg => console.log(svg)} className="svg-icons" />
+                                    <Image
+                                        src="https://image.flaticon.com/icons/svg/263/263078.svg"
+                                    />    
                                 </Col>
                                 <Col md={1} />
                             </Row>
@@ -134,7 +139,9 @@ export default class Home extends Component {
                                 </Col>
                                 <Col md={2} />
                                 <Col xs={12} md={4}>
-                                    <ReactSVG path="./svg/003-money.svg" callback={svg => console.log(svg)} className="svg-icons" />
+                                    <Image
+                                        src="https://image.flaticon.com/icons/svg/639/639416.svg"
+                                    />    
                                 </Col>
                                 <Col md={1} />
                             </Row>
@@ -154,7 +161,9 @@ export default class Home extends Component {
                                 </Col>
                                 <Col md={2} />
                                 <Col xs={12} md={4}>
-                                    <ReactSVG path="./svg/002-medal.svg" callback={svg => console.log(svg)} className="svg-icons" />
+                                    <Image
+                                        src="https://image.flaticon.com/icons/svg/639/639388.svg"
+                                    />    
                                 </Col>
                                 <Col md={1} />
                             </Row>
@@ -178,14 +187,8 @@ export default class Home extends Component {
                         <Jumbotron id="our-share"><h1>3%</h1></Jumbotron>
                         <h3>Gets us electricity and cheap coffee.</h3>
                     </Col>
-                    <Col xs={12} md={3} />
-                    <Col xs={12} md={12}>
-                        <Row>
-                            <ReactSVG path="./svg/001-briefcase.svg" callback={svg => console.log(svg)} className="svg-icons" />
-                        </Row>
-                    </Col>
                 </Row>
-                <Footer/>
+                <Footer />
             </div>
         );
     }
