@@ -9,8 +9,8 @@ import API from "../../../utils/API";
 export default class Market extends Component {
 
     state = {
-        userdata: []
-    };
+        users: []
+    }
 
   componentDidMount() {
     this.loadUsers();
@@ -19,15 +19,17 @@ export default class Market extends Component {
     loadUsers = () => {
         API.getUser(this.props.match.params.id)
         .then(res => {
-            // console.log(res);
-            this.setState({ userdata: res.data })
-            // console.log("In load users: " + this.state.userdata.user.username);
+            this.setState({ users: res.data,  })
+            console.log("In load users: " + this.state.users[0]);
         })
         .catch(err => console.log(err));
     };
 
 
     render() {
+        // if (this.state.users.length > 0) {
+        //     console.log(this.state.users[0].user.username)
+        // }
         return (
             <div>
                 {this.state.userdata.map(function(user){
@@ -43,14 +45,14 @@ export default class Market extends Component {
                             <Col xs={12} md={3}>
                                 <Image
                                     className="feat-user"
-                                    src={user.pictureUrl}
-                                    alt={user.username}
+                                    src={this.state.users[2]}
+                                    alt={testImages[0].alttext}
                                     circle
                                 />
                             </Col>
                             <Col xs={12} md={4}>
                                 <Row className="user-pane">
-                                    <h3>{user.username}</h3>
+                                    <h3>{this.state.users[0]}</h3>
                                     <h4>{user.description}</h4>
                                 </Row>
                                 <Row className="user-pane">
