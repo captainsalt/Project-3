@@ -23,8 +23,8 @@ router
 //api/users/:id
 router
  .route("/:id/market")
-  .post(usersController.createItem)
-  .get(usersController.getItems);
+  .get(usersController.getItems)
+  .post(usersController.createItem);
 
 
 

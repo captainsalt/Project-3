@@ -14,7 +14,8 @@ export default class Market extends Component {
         bio: [],
         pictureUrl: [],
         patrons: [],
-        marketItems: []
+        marketItems: [],
+        date: []
     }
 
   componentDidMount() {
@@ -29,7 +30,8 @@ export default class Market extends Component {
                             email: res.data.email,
                             bio: res.data.description,
                             patrons: res.data.patrons,
-                            pictureUrl: res.data.pictureUrl})
+                            pictureUrl: res.data.pictureUrl,
+                            date: res.data.date})
             console.log("In load users: " + this.state.username);
         })
         .catch(err => console.log(err));
@@ -55,7 +57,6 @@ export default class Market extends Component {
         // }
         return (
             <div>
-                {this.state.userdata.map(function(user){
                 <div>
                 <Row>
                     <Col xs={12} md={2}>
@@ -69,7 +70,7 @@ export default class Market extends Component {
                                 <Image
                                     className="feat-user"
                                     src={this.state.pictureUrl}
-                                    alt={testImage}
+                                    alt={this.state.username}
                                     circle
                                 />
                             </Col>
@@ -81,7 +82,7 @@ export default class Market extends Component {
                                 </Row>
                                 <Row className="user-pane">
                                     <Row>
-                                        <h5>Last updated store: {user.date}</h5>
+                                        <h5>Last updated store: {this.state.date}</h5>
                                     </Row>
                                     <Row>
                                         <h5>{this.state.patrons}</h5>
