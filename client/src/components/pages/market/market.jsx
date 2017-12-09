@@ -9,21 +9,44 @@ import API from "../../../utils/API";
 export default class Market extends Component {
 
     state = {
-        users: []
+        username: [],
+        email: [],
+        bio: [],
+        pictureUrl: [],
+        patrons: [],
+        marketItems: []
     }
 
   componentDidMount() {
     this.loadUsers();
+    this.loadMarket()
     }
 
     loadUsers = () => {
         API.getUser(this.props.match.params.id)
         .then(res => {
-            this.setState({ users: res.data,  })
-            console.log("In load users: " + this.state.users[0]);
+            this.setState({ username: res.data.username,
+                            email: res.data.email,
+                            bio: res.data.description,
+                            patrons: res.data.patrons,
+                            pictureUrl: res.data.pictureUrl})
+            console.log("In load users: " + this.state.username);
         })
         .catch(err => console.log(err));
     };
+
+    loadMarket = () => {
+        API.getItems(this.props.match.params.id)
+        .then(res => {
+            // this.setState({ username: res.data.username,
+            //                 email: res.data.email,
+            //                 bio: res.data.description,
+            //                 patrons: res.data.patrons,
+            //                 pictureUrl: res.data.pictureUrl})
+            console.log("In load market: " + res.data);
+        })
+        .catch(err => console.log(err));
+    }
 
 
     render() {
@@ -44,15 +67,15 @@ export default class Market extends Component {
                             <Col xs={12} md={3}>
                                 <Image
                                     className="feat-user"
-                                    src={this.state.users[2]}
+                                    src={this.state.pictureUrl}
                                     alt={testImages[0].alttext}
                                     circle
                                 />
                             </Col>
                             <Col xs={12} md={4}>
                                 <Row className="user-pane">
-                                    <h3>{this.state.users[0]}</h3>
-                                    <h4>{testImages[0].autobio}</h4>
+                                    <h3>{this.state.username}</h3>
+                                    <h4>{this.state.bio}</h4>
                                     
                                 </Row>
                                 <Row className="user-pane">
@@ -60,10 +83,10 @@ export default class Market extends Component {
                                         <h5>Last updated store: 12/01/2017</h5>
                                     </Row>
                                     <Row>
-                                        <h5>Patrons: 7</h5>
+                                        <h5>{this.state.patrons}</h5>
                                     </Row>
                                     <Row>
-                                        <h5>{testImages[0].alttext}</h5>
+                                        <h5>{this.state.email}</h5>
                                     </Row>
                                 </Row>
                             </Col>
@@ -79,11 +102,14 @@ export default class Market extends Component {
                     </Col>
                     <Col xs={12} md={8}>
                         <Panel id="store-panel">
-                            {testImages[0].market.map(function(element,i){
+                            {/* {testImages[0].market.map(function(element,i){
                                return(<Col md={4} className="item-img-container">
                                 <Image className="item-img" src={element} key={i} circle responsive/>
                                </Col>);  
-                            })}
+                            })} */}
+                            {
+                                
+                            }
                         </Panel>
                     </Col>
                     <Col xs={12} md={2}>

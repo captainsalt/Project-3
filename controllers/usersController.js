@@ -40,12 +40,14 @@ getUser (req, res) {
       return res.status(404).send();
     }
 
-    // console.log(user);
-    var blah = [user.username, user.email, user.pictureUrl, user.password]
+    // console.log(user.pictureUrl);
+    // var blah = [user.username, user.email, user.pictureUrl, user.password]
 
-    console.log(blah)
+    // console.log(blah)
 
-    res.send(blah);
+
+    // I am sending user object and then storing individual properties in the state
+    res.send(user);
    }).catch((e) => {
       res.status(404).send();
    });
@@ -98,7 +100,7 @@ createItem (req, res) {
    .populate('market')
    .then((user) => {
      console.log(user.market);  
-     res.send(user.market);
+     res.json(user.market);
    }).catch((e) => {//end of User.find
       res.status(404).send();
    }); 

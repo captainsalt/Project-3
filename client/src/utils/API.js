@@ -39,7 +39,7 @@ export default {
   },
   //gets the users items
   getItems: function(id) {
-    return axios.get('api/users'+id+'/market');
+    return axios.get('api/users/'+id+'/market');
   },
   //gets all users that match the category
   getCategory: function(category) {
