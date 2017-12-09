@@ -20,6 +20,7 @@ featured{
 
 .thumbnail{
     background: #3B8686;
+    border-radius: 20px;
 }
 
 h3{
@@ -44,6 +45,7 @@ h4 {
 #our-share {
     background-color: #3B8686;
     color: #CEFFCE;
+    border-radius: 20px;
 }
 .artist {
     color:  #A8DBA8;
