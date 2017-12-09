@@ -20,11 +20,11 @@ router
 .route("/:id")
   .get(usersController.getUser);
   
-//api/user/:id
+//api/users/:id
 router
  .route("/:id/market")
-  .post(usersController.createItem)
-  .get(usersController.getItems);
+  .get(usersController.getItems)
+  .post(usersController.createItem);
 
 
 
