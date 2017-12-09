@@ -14,7 +14,7 @@ export default class Discover extends Component {
 
     //handle click event
     handleClick = (event) => {
-        console.log(event)
+        // console.log(event)
         // var req_params_id = event.target.name;
         // var value = event.target.value;
         //this.setState({ [req_params_id]: value });
@@ -31,7 +31,7 @@ export default class Discover extends Component {
         API.getCategory()
             .then(res => {
                 this.setState({ users: res.data })
-                console.log("In load users: " + this.state);
+                // console.log("In load users: " + this.state);
             })
             .catch(err => console.log(err));
     };
@@ -69,7 +69,7 @@ export default class Discover extends Component {
                                             <Image
                                                 className="feat-user"
                                                 src={user.pictureUrl}
-                                                alt={testImages[0].alttext}
+                                                alt={user.username}
                                                 circle
                                             />
                                          </Link>

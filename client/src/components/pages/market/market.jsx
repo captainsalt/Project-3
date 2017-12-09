@@ -3,7 +3,7 @@ import "./market.css";
 import { Row, Col, Panel, Image } from "react-bootstrap";
 import testImages from "../testimages.json";
 import API from "../../../utils/API";
-
+// import testImages from "../../testimages.json"
 
 
 export default class Market extends Component {
@@ -53,9 +53,10 @@ export default class Market extends Component {
         // if (this.state.users.length > 0) {
         //     console.log(this.state.users[0].user.username)
         // }
-
         return (
             <div>
+                {this.state.userdata.map(function(user){
+                <div>
                 <Row>
                     <Col xs={12} md={2}>
                     </Col>
@@ -68,7 +69,7 @@ export default class Market extends Component {
                                 <Image
                                     className="feat-user"
                                     src={this.state.pictureUrl}
-                                    alt={testImages[0].alttext}
+                                    alt={testImage}
                                     circle
                                 />
                             </Col>
@@ -80,7 +81,7 @@ export default class Market extends Component {
                                 </Row>
                                 <Row className="user-pane">
                                     <Row>
-                                        <h5>Last updated store: 12/01/2017</h5>
+                                        <h5>Last updated store: {user.date}</h5>
                                     </Row>
                                     <Row>
                                         <h5>{this.state.patrons}</h5>
@@ -104,7 +105,8 @@ export default class Market extends Component {
                         <Panel id="store-panel">
                             {/* {testImages[0].market.map(function(element,i){
                                return(<Col md={4} className="item-img-container">
-                                <Image className="item-img" src={element} key={i} circle responsive/>
+                                <Image className="item-img" src={element.pictureUrl} key={i} circle responsive/>
+                               <Row><p>{element.item}</p></Row>
                                </Col>);  
                             })} */}
                             {
@@ -115,6 +117,8 @@ export default class Market extends Component {
                     <Col xs={12} md={2}>
                     </Col>
                 </Row>
+                </div>
+                })}
             </div>
         )
     }
